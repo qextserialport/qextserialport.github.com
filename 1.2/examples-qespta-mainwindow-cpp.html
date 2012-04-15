@@ -8,7 +8,7 @@
 </head>
 <table border="0" cellpadding="0" cellspacing="0" width="100%">
 <tr>
-<td class="postheader" valign="center"><a href="index.html">Home</a> &middot; <a href="classes.html">All Classes</a> &middot; <a href="functions.html">All Functions</a> &middot;</td></tr></table><h1 class="title">MainWindow.cpp Example File</h1>
+<td class="postheader" valign="center"><a href="index.html">Home</a> &middot; <a href="classes.html">All Classes</a> &middot;</td></tr></table><h1 class="title">MainWindow.cpp Example File</h1>
 <span class="small-subtitle">examples/qespta/MainWindow.cpp</span>
 <!-- $$$examples/qespta/MainWindow.cpp-description -->
 <div class="descr"> <a name="details"></a>
@@ -25,9 +25,8 @@
     <span class="preprocessor">#include &quot;MessageWindow.h&quot;</span>
     <span class="preprocessor">#include &quot;QespTest.h&quot;</span>
 
-    MainWindow<span class="operator">::</span>MainWindow(<span class="keyword">const</span> <span class="type"><a href="http://qt.nokia.com/doc/4.8/qstring.html">QString</a></span> <span class="operator">&amp;</span>title)
+    MainWindow<span class="operator">::</span>MainWindow()
     {
-            setWindowTitle(title);
         <span class="comment">//central widget</span>
             QespTest<span class="operator">*</span> qespTest <span class="operator">=</span> <span class="keyword">new</span> QespTest();
         setCentralWidget(qespTest);
@@ -37,6 +36,8 @@
 
             createActions();
             createMenus();
+
+        setWindowTitle(tr(<span class="string">&quot;QextSerialPort Test Application&quot;</span>));
     }
 
     <span class="type">void</span> MainWindow<span class="operator">::</span>about()

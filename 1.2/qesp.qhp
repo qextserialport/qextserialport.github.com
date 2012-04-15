@@ -7,57 +7,6 @@
             <section ref="index.html" title="QextSerialPort Reference Documentation"/>
         </toc>
         <keywords>
-            <keyword name="BaudRateType" id="BaudRateType" ref="ABaudRateType-enum"/>
-            <keyword name="BAUD50" id="BAUD50" ref="ABaudRateType-enum"/>
-            <keyword name="BAUD75" id="BAUD75" ref="ABaudRateType-enum"/>
-            <keyword name="BAUD134" id="BAUD134" ref="ABaudRateType-enum"/>
-            <keyword name="BAUD150" id="BAUD150" ref="ABaudRateType-enum"/>
-            <keyword name="BAUD200" id="BAUD200" ref="ABaudRateType-enum"/>
-            <keyword name="BAUD1800" id="BAUD1800" ref="ABaudRateType-enum"/>
-            <keyword name="BAUD76800" id="BAUD76800" ref="ABaudRateType-enum"/>
-            <keyword name="BAUD230400" id="BAUD230400" ref="ABaudRateType-enum"/>
-            <keyword name="BAUD460800" id="BAUD460800" ref="ABaudRateType-enum"/>
-            <keyword name="BAUD500000" id="BAUD500000" ref="ABaudRateType-enum"/>
-            <keyword name="BAUD576000" id="BAUD576000" ref="ABaudRateType-enum"/>
-            <keyword name="BAUD921600" id="BAUD921600" ref="ABaudRateType-enum"/>
-            <keyword name="BAUD1000000" id="BAUD1000000" ref="ABaudRateType-enum"/>
-            <keyword name="BAUD1152000" id="BAUD1152000" ref="ABaudRateType-enum"/>
-            <keyword name="BAUD1500000" id="BAUD1500000" ref="ABaudRateType-enum"/>
-            <keyword name="BAUD2000000" id="BAUD2000000" ref="ABaudRateType-enum"/>
-            <keyword name="BAUD2500000" id="BAUD2500000" ref="ABaudRateType-enum"/>
-            <keyword name="BAUD3000000" id="BAUD3000000" ref="ABaudRateType-enum"/>
-            <keyword name="BAUD3500000" id="BAUD3500000" ref="ABaudRateType-enum"/>
-            <keyword name="BAUD4000000" id="BAUD4000000" ref="ABaudRateType-enum"/>
-            <keyword name="BAUD14400" id="BAUD14400" ref="ABaudRateType-enum"/>
-            <keyword name="BAUD56000" id="BAUD56000" ref="ABaudRateType-enum"/>
-            <keyword name="BAUD128000" id="BAUD128000" ref="ABaudRateType-enum"/>
-            <keyword name="BAUD256000" id="BAUD256000" ref="ABaudRateType-enum"/>
-            <keyword name="BAUD110" id="BAUD110" ref="ABaudRateType-enum"/>
-            <keyword name="BAUD300" id="BAUD300" ref="ABaudRateType-enum"/>
-            <keyword name="BAUD600" id="BAUD600" ref="ABaudRateType-enum"/>
-            <keyword name="BAUD1200" id="BAUD1200" ref="ABaudRateType-enum"/>
-            <keyword name="BAUD2400" id="BAUD2400" ref="ABaudRateType-enum"/>
-            <keyword name="BAUD4800" id="BAUD4800" ref="ABaudRateType-enum"/>
-            <keyword name="BAUD9600" id="BAUD9600" ref="ABaudRateType-enum"/>
-            <keyword name="BAUD19200" id="BAUD19200" ref="ABaudRateType-enum"/>
-            <keyword name="BAUD38400" id="BAUD38400" ref="ABaudRateType-enum"/>
-            <keyword name="BAUD57600" id="BAUD57600" ref="ABaudRateType-enum"/>
-            <keyword name="BAUD115200" id="BAUD115200" ref="ABaudRateType-enum"/>
-            <keyword name="DataBitsType" id="DataBitsType" ref="ADataBitsType-enum"/>
-            <keyword name="DATA_5" id="DATA_5" ref="ADataBitsType-enum"/>
-            <keyword name="DATA_6" id="DATA_6" ref="ADataBitsType-enum"/>
-            <keyword name="DATA_7" id="DATA_7" ref="ADataBitsType-enum"/>
-            <keyword name="DATA_8" id="DATA_8" ref="ADataBitsType-enum"/>
-            <keyword name="FlowType" id="FlowType" ref="AFlowType-enum"/>
-            <keyword name="FLOW_OFF" id="FLOW_OFF" ref="AFlowType-enum"/>
-            <keyword name="FLOW_HARDWARE" id="FLOW_HARDWARE" ref="AFlowType-enum"/>
-            <keyword name="FLOW_XONXOFF" id="FLOW_XONXOFF" ref="AFlowType-enum"/>
-            <keyword name="ParityType" id="ParityType" ref="AParityType-enum"/>
-            <keyword name="PAR_NONE" id="PAR_NONE" ref="AParityType-enum"/>
-            <keyword name="PAR_ODD" id="PAR_ODD" ref="AParityType-enum"/>
-            <keyword name="PAR_EVEN" id="PAR_EVEN" ref="AParityType-enum"/>
-            <keyword name="PAR_MARK" id="PAR_MARK" ref="AParityType-enum"/>
-            <keyword name="PAR_SPACE" id="PAR_SPACE" ref="AParityType-enum"/>
             <keyword name="PortSettings" id="PortSettings" ref="portsettings.html"/>
             <keyword name="BaudRate" id="PortSettings::BaudRate" ref="portsettings.html#BaudRate-var"/>
             <keyword name="DataBits" id="PortSettings::DataBits" ref="portsettings.html#DataBits-var"/>
@@ -84,6 +33,7 @@
             <keyword name="QextSerialPort::EventDriven" id="QextSerialPort::EventDriven" ref="qextserialport.html#QueryMode-enum"/>
             <keyword name="baudRate" id="QextSerialPort::baudRate" ref="qextserialport.html#baudRate"/>
             <keyword name="bytesAvailable" id="QextSerialPort::bytesAvailable" ref="qextserialport.html#bytesAvailable"/>
+            <keyword name="canReadLine" id="QextSerialPort::canReadLine" ref="qextserialport.html#canReadLine"/>
             <keyword name="close" id="QextSerialPort::close" ref="qextserialport.html#close"/>
             <keyword name="dataBits" id="QextSerialPort::dataBits" ref="qextserialport.html#dataBits"/>
             <keyword name="dsrChanged" id="QextSerialPort::dsrChanged" ref="qextserialport.html#dsrChanged"/>
@@ -113,10 +63,6 @@
             <keyword name="writeData" id="QextSerialPort::writeData" ref="qextserialport.html#writeData"/>
             <keyword name="~QextSerialPort" id="QextSerialPort::~QextSerialPort" ref="qextserialport.html#dtor.QextSerialPort"/>
             <keyword name="QextSerialPort Manual" id="QextSerialPort Manual" ref="index.html"/>
-            <keyword name="StopBitsType" id="StopBitsType" ref="AStopBitsType-enum"/>
-            <keyword name="STOP_1" id="STOP_1" ref="AStopBitsType-enum"/>
-            <keyword name="STOP_1_5" id="STOP_1_5" ref="AStopBitsType-enum"/>
-            <keyword name="STOP_2" id="STOP_2" ref="AStopBitsType-enum"/>
             <keyword name="UartAssistant Demo" id="UartAssistant Demo" ref="examples-uartassistant.html"/>
             <keyword name="enumerator Demo" id="enumerator Demo" ref="examples-enumerator.html"/>
             <keyword name="qespta Demo" id="qespta Demo" ref="examples-qespta.html"/>

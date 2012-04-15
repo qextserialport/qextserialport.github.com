@@ -9,7 +9,7 @@
 </head>
 <table border="0" cellpadding="0" cellspacing="0" width="100%">
 <tr>
-<td class="postheader" valign="center"><a href="index.html">Home</a> &middot; <a href="classes.html">All Classes</a> &middot; <a href="functions.html">All Functions</a> &middot;</td></tr></table><li><a href="http://qt.nokia.com/doc/4.8/modules.html">Modules</a></li>
+<td class="postheader" valign="center"><a href="index.html">Home</a> &middot; <a href="classes.html">All Classes</a> &middot;</td></tr></table><li><a href="http://qt.nokia.com/doc/4.8/modules.html">Modules</a></li>
 <li>QextSerialPort</li>
 <div class="toc">
 <h3><a name="toc">Contents</a></h3>
@@ -63,6 +63,7 @@
 <h2>Reimplemented Public Functions</h2>
 <table class="alignedsummary">
 <tr><td class="memItemLeft rightAlign topAlign"> virtual qint64 </td><td class="memItemRight bottomAlign"><b><a href="qextserialport.html#bytesAvailable">bytesAvailable</a></b> () const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual bool </td><td class="memItemRight bottomAlign"><b><a href="qextserialport.html#canReadLine">canReadLine</a></b> () const</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> virtual void </td><td class="memItemRight bottomAlign"><b><a href="qextserialport.html#close">close</a></b> ()</td></tr>
 <tr><td class="memItemLeft rightAlign topAlign"> virtual bool </td><td class="memItemRight bottomAlign"><b><a href="qextserialport.html#isSequential">isSequential</a></b> () const</td></tr>
 </table>
@@ -128,16 +129,10 @@
     <a href="http://qt.nokia.com/doc/4.8/qobject.html#connect">connect</a>(port<span class="operator">,</span> SIGNAL(readyRead())<span class="operator">,</span> myClass<span class="operator">,</span> SLOT(onDataAvailable()));
     port<span class="operator">-</span><span class="operator">&gt;</span><a href="qextserialport.html#open">open</a>();
 
-    <span class="type">void</span> MyClass<span class="operator">::</span>onDataAvailable() {
-        <span class="type">int</span> avail <span class="operator">=</span> port<span class="operator">-</span><span class="operator">&gt;</span>bytesAvailable();
-        <span class="keyword">if</span>( avail <span class="operator">&gt;</span> <span class="number">0</span> ) {
-            <span class="type"><a href="http://qt.nokia.com/doc/4.8/qbytearray.html">QByteArray</a></span> usbdata;
-            usbdata<span class="operator">.</span>resize(avail);
-            <span class="type">int</span> read <span class="operator">=</span> port<span class="operator">-</span><span class="operator">&gt;</span>read(usbdata<span class="operator">.</span>data()<span class="operator">,</span> usbdata<span class="operator">.</span>size());
-            <span class="keyword">if</span>( read <span class="operator">&gt;</span> <span class="number">0</span> ) {
-                processNewData(usbdata);
-            }
-        }
+    <span class="type">void</span> MyClass<span class="operator">::</span>onDataAvailable()
+    {
+        <span class="type"><a href="http://qt.nokia.com/doc/4.8/qbytearray.html">QByteArray</a></span> data <span class="operator">=</span> port<span class="operator">-</span><span class="operator">&gt;</span>readAll();
+        processNewData(usbdata);
     }</pre>
 <a name="compatibility"></a>
 <h3>Compatibility</h3>
@@ -203,6 +198,10 @@
 <p>Reimplemented from <a href="http://qt.nokia.com/doc/4.8/qiodevice.html#bytesAvailable">QIODevice::bytesAvailable</a>().</p>
 <p>Returns the number of bytes waiting in the port's receive queue. This function will return 0 if the port is not currently open, or -1 on error.</p>
 <!-- @@@bytesAvailable -->
+<!-- $$$canReadLine[overload1]$$$canReadLine -->
+<h3 class="fn"><a name="canReadLine"></a><span class="type">bool</span> QextSerialPort::<span class="name">canReadLine</span> () const<tt> [virtual]</tt></h3>
+<p>Reimplemented from <a href="http://qt.nokia.com/doc/4.8/qiodevice.html#canReadLine">QIODevice::canReadLine</a>().</p>
+<!-- @@@canReadLine -->
 <!-- $$$close[overload1]$$$close -->
 <h3 class="fn"><a name="close"></a><span class="type">void</span> QextSerialPort::<span class="name">close</span> ()<tt> [virtual]</tt></h3>
 <p>Reimplemented from <a href="http://qt.nokia.com/doc/4.8/qiodevice.html#close">QIODevice::close</a>().</p>

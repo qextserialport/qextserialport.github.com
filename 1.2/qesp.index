@@ -2,7 +2,6 @@
 <!DOCTYPE QDOCINDEX>
 <INDEX url="http://code.google.com/p/qextserialport" title="QextSerialPort Reference Documentation" version="">
     <namespace access="public" threadsafety="unspecified" status="commendable" name="" href="" location="" module="">
-        <page access="public" status="commendable" name="all-examples.html" href="all-examples.html" subtype="page" title="" fulltitle="" subtitle="" location="index.qdoc"/>
         <page access="public" status="commendable" name="classes.html" href="classes.html" subtype="page" title="" fulltitle="" subtitle="" location="index.qdoc"/>
         <page access="public" status="commendable" name="examples/enumerator" href="examples-enumerator.html" subtype="example" title="enumerator Demo" fulltitle="enumerator Demo" subtitle="" location="enumerator.qdoc">
             <page access="public" status="commendable" name="examples/enumerator/enumerator.pro" href="examples-enumerator-enumerator-pro.html" subtype="file" title="" fulltitle="enumerator.pro Example File" subtitle="examples/enumerator/enumerator.pro" location=""/>
@@ -27,14 +26,14 @@
             <page access="public" status="commendable" name="examples/uartassistant/main.cpp" href="examples-uartassistant-main-cpp.html" subtype="file" title="" fulltitle="main.cpp Example File" subtitle="examples/uartassistant/main.cpp" location=""/>
             <page access="public" status="commendable" name="examples/uartassistant/uartassistant.pro" href="examples-uartassistant-uartassistant-pro.html" subtype="file" title="" fulltitle="uartassistant.pro Example File" subtitle="examples/uartassistant/uartassistant.pro" location=""/>
         </page>
-        <page access="public" status="commendable" name="functions.html" href="functions.html" subtype="page" title="" fulltitle="" subtitle="" location="index.qdoc"/>
         <page access="public" status="commendable" name="index.html" href="index.html" subtype="page" title="QextSerialPort Manual" fulltitle="QextSerialPort Manual" subtitle="" location="index.qdoc">
-            <contents name="description" title="Description" level="1"/>
+            <contents name="overview" title="Overview" level="1"/>
             <contents name="classes" title="Classes" level="1"/>
-            <contents name="usage" title="Usage" level="1"/>
-            <contents name="using-qexserialport-library" title="Using QexSerialPort library" level="2"/>
+            <contents name="getting-started" title="Getting Started" level="1"/>
+            <contents name="using-qexserialport-as-library" title="Using QexSerialPort as library" level="2"/>
             <contents name="build-documents" title="Build documents" level="2"/>
             <contents name="examples" title="Examples" level="1"/>
+            <contents name="build-examples" title="Build examples" level="2"/>
             <contents name="resources" title="Resources" level="1"/>
             <contents name="nokia-trolltech" title="Nokia(Trolltech)" level="2"/>
             <contents name="msdn" title="MSDN" level="2"/>
@@ -103,6 +102,7 @@
             </function>
             <function access="public" threadsafety="unspecified" status="commendable" name="baudRate" fullname="QextSerialPort::baudRate" href="qextserialport.html#baudRate" location="qextserialport.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="BaudRateType" signature="baudRate() const"/>
             <function access="public" threadsafety="unspecified" status="commendable" name="bytesAvailable" fullname="QextSerialPort::bytesAvailable" href="qextserialport.html#bytesAvailable" location="qextserialport.h" virtual="impure" meta="plain" const="true" static="false" overload="false" type="qint64" signature="bytesAvailable() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="canReadLine" fullname="QextSerialPort::canReadLine" href="qextserialport.html#canReadLine" location="qextserialport.h" virtual="impure" meta="plain" const="true" static="false" overload="false" type="bool" signature="canReadLine() const"/>
             <function access="public" threadsafety="unspecified" status="commendable" name="close" fullname="QextSerialPort::close" href="qextserialport.html#close" location="qextserialport.h" virtual="impure" meta="plain" const="false" static="false" overload="false" type="void" signature="close()"/>
             <function access="public" threadsafety="unspecified" status="commendable" name="dataBits" fullname="QextSerialPort::dataBits" href="qextserialport.html#dataBits" location="qextserialport.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="DataBitsType" signature="dataBits() const"/>
             <function access="public" threadsafety="unspecified" status="commendable" name="dsrChanged" fullname="QextSerialPort::dsrChanged" href="qextserialport.html#dsrChanged" location="qextserialport.h" virtual="non" meta="signal" const="false" static="false" overload="false" type="void" signature="dsrChanged(bool status)">
@@ -161,65 +161,5 @@
             </function>
             <function access="public" threadsafety="unspecified" status="commendable" name="~QextSerialPort" fullname="QextSerialPort::~QextSerialPort" href="qextserialport.html#dtor.QextSerialPort" location="qextserialport.h" virtual="non" meta="destructor" const="false" static="false" overload="false" type="" signature="~QextSerialPort()"/>
         </class>
-        <enum access="public" threadsafety="unspecified" status="commendable" name="BaudRateType" href="#BaudRateType-enum" location="qextserialport.h">
-            <value name="BAUD50" value="50"/>
-            <value name="BAUD75" value="75"/>
-            <value name="BAUD134" value="134"/>
-            <value name="BAUD150" value="150"/>
-            <value name="BAUD200" value="200"/>
-            <value name="BAUD1800" value="1800"/>
-            <value name="BAUD76800" value="76800"/>
-            <value name="BAUD230400" value="230400"/>
-            <value name="BAUD460800" value="460800"/>
-            <value name="BAUD500000" value="500000"/>
-            <value name="BAUD576000" value="576000"/>
-            <value name="BAUD921600" value="921600"/>
-            <value name="BAUD1000000" value="1000000"/>
-            <value name="BAUD1152000" value="1152000"/>
-            <value name="BAUD1500000" value="1500000"/>
-            <value name="BAUD2000000" value="2000000"/>
-            <value name="BAUD2500000" value="2500000"/>
-            <value name="BAUD3000000" value="3000000"/>
-            <value name="BAUD3500000" value="3500000"/>
-            <value name="BAUD4000000" value="4000000"/>
-            <value name="BAUD14400" value="14400"/>
-            <value name="BAUD56000" value="56000"/>
-            <value name="BAUD128000" value="128000"/>
-            <value name="BAUD256000" value="256000"/>
-            <value name="BAUD110" value="110"/>
-            <value name="BAUD300" value="300"/>
-            <value name="BAUD600" value="600"/>
-            <value name="BAUD1200" value="1200"/>
-            <value name="BAUD2400" value="2400"/>
-            <value name="BAUD4800" value="4800"/>
-            <value name="BAUD9600" value="9600"/>
-            <value name="BAUD19200" value="19200"/>
-            <value name="BAUD38400" value="38400"/>
-            <value name="BAUD57600" value="57600"/>
-            <value name="BAUD115200" value="115200"/>
-        </enum>
-        <enum access="public" threadsafety="unspecified" status="commendable" name="DataBitsType" href="#DataBitsType-enum" location="qextserialport.h">
-            <value name="DATA_5" value="5"/>
-            <value name="DATA_6" value="6"/>
-            <value name="DATA_7" value="7"/>
-            <value name="DATA_8" value="8"/>
-        </enum>
-        <enum access="public" threadsafety="unspecified" status="commendable" name="FlowType" href="#FlowType-enum" location="qextserialport.h">
-            <value name="FLOW_OFF" value="0"/>
-            <value name="FLOW_HARDWARE" value="1"/>
-            <value name="FLOW_XONXOFF" value="2"/>
-        </enum>
-        <enum access="public" threadsafety="unspecified" status="commendable" name="ParityType" href="#ParityType-enum" location="qextserialport.h">
-            <value name="PAR_NONE" value="0"/>
-            <value name="PAR_ODD" value="1"/>
-            <value name="PAR_EVEN" value="2"/>
-            <value name="PAR_MARK" value="3"/>
-            <value name="PAR_SPACE" value="4"/>
-        </enum>
-        <enum access="public" threadsafety="unspecified" status="commendable" name="StopBitsType" href="#StopBitsType-enum" location="qextserialport.h">
-            <value name="STOP_1" value="0"/>
-            <value name="STOP_1_5" value="1"/>
-            <value name="STOP_2" value="2"/>
-        </enum>
     </namespace>
 </INDEX>
