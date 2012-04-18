@@ -29,12 +29,14 @@
                 <section ref="examples-uartassistant-dialog-ui.html" title="dialog.ui Example File"/>
                 <section ref="examples-enumerator.html" title="enumerator Demo"/>
                 <section ref="examples-enumerator-enumerator-pro.html" title="enumerator.pro Example File"/>
+                <section ref="examples-enumerator-enumerator-compat-pro.html" title="enumerator_compat.pro Example File"/>
                 <section ref="examples-uartassistant-hled-cpp.html" title="hled.cpp Example File"/>
                 <section ref="examples-uartassistant-hled-h.html" title="hled.h Example File"/>
                 <section ref="examples-enumerator-main-cpp.html" title="main.cpp Example File"/>
                 <section ref="examples-qesp-quick-qesp-quick-pro.html" title="qesp_quick.pro Example File"/>
                 <section ref="examples-qesp-quick-qesp-quick-qrc.html" title="qesp_quick.qrc Example File"/>
                 <section ref="examples-uartassistant-uartassistant-pro.html" title="uartassistant.pro Example File"/>
+                <section ref="examples-uartassistant-uartassistant-compat-pro.html" title="uartassistant_compat.pro Example File"/>
             </section>
         </toc>
         <keywords>
@@ -206,6 +208,8 @@
             <file>examples-enumerator-enumerator-pro.html</file>
             <file>examples-uartassistant.html</file>
             <file>classes.html</file>
+            <file>examples-uartassistant-uartassistant-compat-pro.html</file>
+            <file>examples-enumerator-enumerator-compat-pro.html</file>
             <file>qextportinfo.html</file>
             <file>qextserialhelper.html</file>
             <file>style/style.css</file>

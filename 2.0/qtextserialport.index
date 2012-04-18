@@ -19,6 +19,7 @@
         </page>
         <page access="public" status="commendable" name="examples/enumerator" href="examples-enumerator.html" subtype="example" title="enumerator Demo" fulltitle="enumerator Demo" subtitle="" location="enumerator.qdoc">
             <page access="public" status="commendable" name="examples/enumerator/enumerator.pro" href="examples-enumerator-enumerator-pro.html" subtype="file" title="" fulltitle="enumerator.pro Example File" subtitle="examples/enumerator/enumerator.pro" location=""/>
+            <page access="public" status="commendable" name="examples/enumerator/enumerator_compat.pro" href="examples-enumerator-enumerator-compat-pro.html" subtype="file" title="" fulltitle="enumerator_compat.pro Example File" subtitle="examples/enumerator/enumerator_compat.pro" location=""/>
             <page access="public" status="commendable" name="examples/enumerator/main.cpp" href="examples-enumerator-main-cpp.html" subtype="file" title="" fulltitle="main.cpp Example File" subtitle="examples/enumerator/main.cpp" location=""/>
         </page>
         <page access="public" status="commendable" name="examples/qesp_quick" href="examples-qesp-quick.html" subtype="example" title="QtExtSerialPort QML-Api Demo" fulltitle="QtExtSerialPort QML-Api Demo" subtitle="" location="qesp_quick.qdoc">
@@ -34,14 +35,20 @@
             <page access="public" status="commendable" name="examples/uartassistant/hled.h" href="examples-uartassistant-hled-h.html" subtype="file" title="" fulltitle="hled.h Example File" subtitle="examples/uartassistant/hled.h" location=""/>
             <page access="public" status="commendable" name="examples/uartassistant/main.cpp" href="examples-uartassistant-main-cpp.html" subtype="file" title="" fulltitle="main.cpp Example File" subtitle="examples/uartassistant/main.cpp" location=""/>
             <page access="public" status="commendable" name="examples/uartassistant/uartassistant.pro" href="examples-uartassistant-uartassistant-pro.html" subtype="file" title="" fulltitle="uartassistant.pro Example File" subtitle="examples/uartassistant/uartassistant.pro" location=""/>
+            <page access="public" status="commendable" name="examples/uartassistant/uartassistant_compat.pro" href="examples-uartassistant-uartassistant-compat-pro.html" subtype="file" title="" fulltitle="uartassistant_compat.pro Example File" subtitle="examples/uartassistant/uartassistant_compat.pro" location=""/>
         </page>
         <page access="public" status="commendable" name="index.html" href="index.html" title="Name Collision: index.html" fulltitle="Name Collision: index.html" subtitle="" location="">
             <page access="public" status="commendable" name="index.html" href="index.html" subtype="page" title="QextSerialPort Manual" fulltitle="QextSerialPort Manual" subtitle="" location="index.qdoc">
                 <contents name="overview" title="Overview" level="1"/>
                 <contents name="classes" title="Classes" level="1"/>
                 <contents name="getting-started" title="Getting Started" level="1"/>
+                <contents name="normal-mode" title="Normal Mode" level="1"/>
+                <contents name="build-and-install" title="Build and install" level="2"/>
+                <contents name="c-api" title="C++ API" level="2"/>
+                <contents name="qml-api" title="QML API" level="2"/>
+                <contents name="compat-mode" title="Compat Mode" level="1"/>
+                <contents name="integrate-into-application" title="Integrate into application." level="2"/>
                 <contents name="using-qexserialport-as-library" title="Using QexSerialPort as library" level="2"/>
-                <contents name="build-documents" title="Build documents" level="2"/>
                 <contents name="examples" title="Examples" level="1"/>
                 <contents name="resources" title="Resources" level="1"/>
                 <contents name="nokia-trolltech" title="Nokia(Trolltech)" level="2"/>
