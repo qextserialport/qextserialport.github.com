@@ -39,8 +39,8 @@
     <span class="operator">.</span><span class="operator">.</span><span class="operator">.</span>
     MyClass<span class="operator">::</span>MyClass()
     {
-        QextSerialPort<span class="operator">*</span> port <span class="operator">=</span> <span class="keyword">new</span> QextSerialPort(<span class="string">&quot;COM1&quot;</span>);
-        connect(port<span class="operator">,</span> SIGNAL(readyRead())<span class="operator">,</span> myClass<span class="operator">,</span> SLOT(onDataAvailable()));
+        port <span class="operator">=</span> <span class="keyword">new</span> QextSerialPort(<span class="string">&quot;COM1&quot;</span>);
+        connect(port<span class="operator">,</span> SIGNAL(readyRead())<span class="operator">,</span> <span class="keyword">this</span><span class="operator">,</span> SLOT(onDataAvailable()));
         port<span class="operator">-</span><span class="operator">&gt;</span>open();
     }
 
