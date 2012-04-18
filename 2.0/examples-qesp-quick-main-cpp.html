@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>QtExtSerialPort : main.cpp Example File (examples/qesp_quick/main.cpp)</title>
+  <link rel="stylesheet" type="text/css" href="style/style.css" />
+</head>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td class="postheader" valign="center"><a href="index.html">Home</a> &middot; <a href="classes.html">All Classes</a> &middot;</td></tr></table><h1 class="title">main.cpp Example File</h1>
+<span class="small-subtitle">examples/qesp_quick/main.cpp</span>
+<!-- $$$examples/qesp_quick/main.cpp-description -->
+<div class="descr"> <a name="details"></a>
+<pre class="cpp">    <span class="comment">/****************************************************************************
+    ** Copyright (c) 2012 Debao Zhang
+    ** All right reserved.
+    ** Web: http://code.google.com/p/qextserialport/
+    **
+    ** Permission is hereby granted, free of charge, to any person obtaining
+    ** a copy of this software and associated documentation files (the
+    ** &quot;Software&quot;), to deal in the Software without restriction, including
+    ** without limitation the rights to use, copy, modify, merge, publish,
+    ** distribute, sublicense, and/or sell copies of the Software, and to
+    ** permit persons to whom the Software is furnished to do so, subject to
+    ** the following conditions:
+    **
+    ** The above copyright notice and this permission notice shall be
+    ** included in all copies or substantial portions of the Software.
+    **
+    ** THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND,
+    ** EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+    ** MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+    ** NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
+    ** LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
+    ** OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+    ** WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+    **
+    ****************************************************************************/</span>
+
+    <span class="preprocessor">#include &lt;QtGui/QGuiApplication&gt;</span>
+    <span class="preprocessor">#include &lt;QtQuick/QQuickView&gt;</span>
+    <span class="preprocessor">#include &lt;QtQml/QQmlEngine&gt;</span>
+
+    <span class="type">int</span> main(<span class="type">int</span> argc<span class="operator">,</span> <span class="type">char</span> <span class="operator">*</span>argv<span class="operator">[</span><span class="operator">]</span>)
+    {
+        <span class="type"><a href="http://doc.qt.nokia.com/qt5/qguiapplication.html">QGuiApplication</a></span> app(argc<span class="operator">,</span> argv);
+        <span class="keyword">const</span> <span class="type"><a href="http://doc.qt.nokia.com/qt5/qstring.html">QString</a></span> mainQmlApp <span class="operator">=</span> QLatin1String(<span class="string">&quot;qrc:/qesp_quick.qml&quot;</span>);
+        <span class="type"><a href="http://doc.qt.nokia.com/qt5/qquickview.html">QQuickView</a></span> view;
+        view<span class="operator">.</span>setSource(<span class="type"><a href="http://doc.qt.nokia.com/qt5/qurl.html">QUrl</a></span>(mainQmlApp));
+        view<span class="operator">.</span>setResizeMode(<span class="type"><a href="http://doc.qt.nokia.com/qt5/qquickview.html">QQuickView</a></span><span class="operator">::</span>SizeRootObjectToView);
+
+        <span class="type"><a href="http://doc.qt.nokia.com/qt5/qobject.html">QObject</a></span><span class="operator">::</span>connect(view<span class="operator">.</span>engine()<span class="operator">,</span> SIGNAL(quit())<span class="operator">,</span> qApp<span class="operator">,</span> SLOT(quit()));
+
+        view<span class="operator">.</span>setGeometry(<span class="type"><a href="http://doc.qt.nokia.com/qt5/qrect.html">QRect</a></span>(<span class="number">100</span><span class="operator">,</span> <span class="number">100</span><span class="operator">,</span> <span class="number">400</span><span class="operator">,</span> <span class="number">600</span>));
+        view<span class="operator">.</span>show();
+
+        <span class="keyword">return</span> app<span class="operator">.</span>exec();
+    }</pre>
+</div>
+<!-- @@@examples/qesp_quick/main.cpp -->
+<p /><address><hr /><div align="center">
+<table width="100%" cellspacing="0" border="0"><tr class="address">
+<td width="40%" align="left">Copyright &copy; 2000-2012</td>
+<td width="20%" align="center"><a href="http://code.google.com/p/qextserialport">QtExtSerialPort Project</a></td>
+<td width="40%" align="right"><div align="right">QextSerialPort Manual</div></td>
+</tr></table></div></address></body>
+</html>

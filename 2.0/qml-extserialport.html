@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- qextqmlserialport.cpp -->
+  <title>QtExtSerialPort : ExtSerialPort</title>
+  <link rel="stylesheet" type="text/css" href="style/style.css" />
+</head>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td class="postheader" valign="center"><a href="index.html">Home</a> &middot; <a href="classes.html">All Classes</a> &middot;</td></tr></table><li>Basic QML Types</li>
+<li>ExtSerialPort</li>
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#properties">Properties</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<h1 class="title">ExtSerialPort</h1>
+<span class="subtitle"></span>
+<!-- $$$ExtSerialPort-brief -->
+<p>Enables you to connect and communicate with a serial port. <a href="#details">More...</a></p>
+<!-- @@@ExtSerialPort -->
+<ul>
+<li><a href="qml-extserialport-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="properties"></a>
+<h2>Properties</h2>
+<ul>
+<li class="fn"><b><b><a href="qml-extserialport.html#baudRate-prop">baudRate</a></b></b> : int</li>
+<li class="fn"><b><b><a href="qml-extserialport.html#connected-prop">connected</a></b></b> : bool</li>
+<li class="fn"><b><b><a href="qml-extserialport.html#dataBits-prop">dataBits</a></b></b> : ExtSerialPort::DataBitsType</li>
+<li class="fn"><b><b><a href="qml-extserialport.html#flowControl-prop">flowControl</a></b></b> : ExtSerialPort::FlowType</li>
+<li class="fn"><b><b><a href="qml-extserialport.html#parity-prop">parity</a></b></b> : ExtSerialPort::ParityType</li>
+<li class="fn"><b><b><a href="qml-extserialport.html#portName-prop">portName</a></b></b> : string</li>
+<li class="fn"><b><b><a href="qml-extserialport.html#stopBits-prop">stopBits</a></b></b> : ExtSerialPort::StopBitsType</li>
+<li class="fn"><b><b><a href="qml-extserialport.html#stringCodec-prop">stringCodec</a></b></b> : string</li>
+<li class="fn"><b><b><a href="qml-extserialport.html#stringData-prop">stringData</a></b></b> : string</li>
+</ul>
+<!-- $$$ExtSerialPort-description -->
+<a name="details"></a>
+<h2>Detailed Description</h2>
+<pre class="qml">    import QtExtSerialPort 2.0
+
+    <span class="type">ExtSerialPort</span>
+    {
+        <span class="name">id</span>: <span class="name">port</span>
+        <span class="name">portName</span>: <span class="string">&quot;COM22&quot;</span>
+        <span class="name">baudRate</span>: <span class="number">19200</span>
+        <span class="name">parity</span>: <span class="name">ExtSerialPort</span>.<span class="name">PAR_EVEN</span>
+        <span class="name">dataBits</span>: <span class="name">ExtSerialPort</span>.<span class="name">DATA_6</span>
+        <span class="name">connected</span>: <span class="number">true</span>
+        <span class="comment">//shown data in TextEdit</span>
+        <span class="name">onDataAvailable</span>: <span class="name">recvText</span>.<span class="name">text</span> <span class="operator">=</span> <span class="name">port</span>.<span class="name">stringData</span>
+    }</pre>
+<p><b>See also </b><a href="qextserialport.html">QextSerialPort</a>.</p>
+<!-- @@@ExtSerialPort -->
+<h2>Property Documentation</h2>
+<!-- $$$baudRate -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="baudRate-prop"></a><span class="name">baudRate</span> : <span class="type"><a href="http://doc.qt.nokia.com/qt5/qml-int.html">int</a></span></p></td></tr></table></div><div class="qmldoc"><p>Gets and sets the baudRate associated with the serial port</p>
+</div></div><!-- @@@baudRate -->
+<br/>
+<!-- $$$connected -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="connected-prop"></a><span class="name">connected</span> : <span class="type"><a href="http://doc.qt.nokia.com/qt5/qml-bool.html">bool</a></span></p></td></tr></table></div><div class="qmldoc"><p>This property holds the device state of the port. If the port is opened, it returns true. It can be set true or false to control the port.</p>
+</div></div><!-- @@@connected -->
+<br/>
+<!-- $$$dataBits -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="dataBits-prop"></a><span class="name">dataBits</span> : <span class="type">ExtSerialPort::DataBitsType</span></p></td></tr></table></div><div class="qmldoc"><p>Gets and sets the dataBits associated with the serial port</p>
+<ul>
+<li><a href="qml-extserialport.html">ExtSerialPort</a>.DATA_8</li>
+<li><a href="qml-extserialport.html">ExtSerialPort</a>.DATA_7</li>
+<li><a href="qml-extserialport.html">ExtSerialPort</a>.DATA_6</li>
+<li><a href="qml-extserialport.html">ExtSerialPort</a>.DATA_5</li>
+</ul>
+</div></div><!-- @@@dataBits -->
+<br/>
+<!-- $$$flowControl -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="flowControl-prop"></a><span class="name">flowControl</span> : <span class="type">ExtSerialPort::FlowType</span></p></td></tr></table></div><div class="qmldoc"><p>Gets and sets the flowControl associated with the serial port</p>
+<ul>
+<li><a href="qml-extserialport.html">ExtSerialPort</a>.FLOW_OFF - No flow control (default)</li>
+<li><a href="qml-extserialport.html">ExtSerialPort</a>.FLOW_HARDWARE - Hardware (RTS/CTS) flow control</li>
+<li><a href="qml-extserialport.html">ExtSerialPort</a>.FLOW_XONXOFF - Software (XON/XOFF) flow control</li>
+</ul>
+</div></div><!-- @@@flowControl -->
+<br/>
+<!-- $$$parity -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="parity-prop"></a><span class="name">parity</span> : <span class="type">ExtSerialPort::ParityType</span></p></td></tr></table></div><div class="qmldoc"><p>Gets and sets the parity associated with the serial port</p>
+<ul>
+<li><a href="qml-extserialport.html">ExtSerialPort</a>.PAR_NONE - (default)</li>
+<li><a href="qml-extserialport.html">ExtSerialPort</a>.PAR_ODD</li>
+<li><a href="qml-extserialport.html">ExtSerialPort</a>.PAR_EVEN</li>
+<li><a href="qml-extserialport.html">ExtSerialPort</a>.PAR_MARK - Windows only</li>
+<li><a href="qml-extserialport.html">ExtSerialPort</a>.PAR_SPACE</li>
+</ul>
+</div></div><!-- @@@parity -->
+<br/>
+<!-- $$$portName -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="portName-prop"></a><span class="name">portName</span> : <span class="type"><a href="http://doc.qt.nokia.com/qt5/qml-string.html">string</a></span></p></td></tr></table></div><div class="qmldoc"><p>Gets and sets the port name associated with the serial port</p>
+</div></div><!-- @@@portName -->
+<br/>
+<!-- $$$stopBits -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="stopBits-prop"></a><span class="name">stopBits</span> : <span class="type">ExtSerialPort::StopBitsType</span></p></td></tr></table></div><div class="qmldoc"><p>Gets and sets the stopBits associated with the serial port</p>
+<ul>
+<li><a href="qml-extserialport.html">ExtSerialPort</a>.STOP_1 - (default)</li>
+<li><a href="qml-extserialport.html">ExtSerialPort</a>.STOP_1_5 - Windows only</li>
+<li><a href="qml-extserialport.html">ExtSerialPort</a>.STOP_2</li>
+</ul>
+</div></div><!-- @@@stopBits -->
+<br/>
+<!-- $$$stringCodec -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="stringCodec-prop"></a><span class="name">stringCodec</span> : <span class="type"><a href="http://doc.qt.nokia.com/qt5/qml-string.html">string</a></span></p></td></tr></table></div><div class="qmldoc"><p>This property controls which <a href="http://doc.qt.nokia.com/qt5/qtextcodec.html">QTextCodec</a> is used to convert <a href="http://doc.qt.nokia.com/qt5/qbytearray.html">QByteArray</a> to and from <a href="http://doc.qt.nokia.com/qt5/qstring.html">QString</a>.</p>
+</div></div><!-- @@@stringCodec -->
+<br/>
+<!-- $$$stringData -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="stringData-prop"></a><span class="name">stringData</span> : <span class="type"><a href="http://doc.qt.nokia.com/qt5/qml-string.html">string</a></span></p></td></tr></table></div><div class="qmldoc"><p>This property receives or sends data to serial port device. Arrival of data is signaled by the dataAvailable signal and can be read by stringData. Calling sendStringData will transmit the string.</p>
+</div></div><!-- @@@stringData -->
+<br/>
+<p /><address><hr /><div align="center">
+<table width="100%" cellspacing="0" border="0"><tr class="address">
+<td width="40%" align="left">Copyright &copy; 2000-2012</td>
+<td width="20%" align="center"><a href="http://code.google.com/p/qextserialport">QtExtSerialPort Project</a></td>
+<td width="40%" align="right"><div align="right">QextSerialPort Manual</div></td>
+</tr></table></div></address></body>
+</html>

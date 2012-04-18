@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<instructionals module="QtExtSerialPort">
+    <examples>
+        <example name="QtExtSerialPort QML-Api Demo" docUrl="qthelp:////examples-qesp-quick.html" projectPath="examples/qesp_quick/qesp_quick.pro">
+            <description><![CDATA[No description available]]></description>
+            <tags>qtextserialport,qml-api,demo</tags>
+            <fileToOpen>examples/qesp_quick/main.cpp</fileToOpen>
+        </example>
+        <example name="UartAssistant Demo" docUrl="qthelp:////examples-uartassistant.html" projectPath="examples/uartassistant/uartassistant.pro" imageUrl="qthelp:////images/uartassistant.png">
+            <description><![CDATA[No description available]]></description>
+            <tags>uartassistant,demo</tags>
+            <fileToOpen>examples/uartassistant/main.cpp</fileToOpen>
+        </example>
+        <example name="enumerator Demo" docUrl="qthelp:////examples-enumerator.html" projectPath="examples/enumerator/enumerator.pro">
+            <description><![CDATA[No description available]]></description>
+            <tags>enumerator,demo</tags>
+            <fileToOpen>examples/enumerator/main.cpp</fileToOpen>
+        </example>
+    </examples>
+</instructionals>
