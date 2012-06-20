@@ -30,7 +30,9 @@
             <contents name="overview" title="Overview" level="1"/>
             <contents name="classes" title="Classes" level="1"/>
             <contents name="getting-started" title="Getting Started" level="1"/>
-            <contents name="using-qexserialport-as-library" title="Using QexSerialPort as library" level="2"/>
+            <contents name="build-into-user-application-directly" title="Build into user application directly" level="2"/>
+            <contents name="using-qexserialport-as-a-system-library" title="Using QexSerialPort as a system library" level="2"/>
+            <contents name="using-qexserialport-as-a-non-system-library" title="Using QexSerialPort as a non-system library" level="2"/>
             <contents name="build-documents" title="Build documents" level="2"/>
             <contents name="examples" title="Examples" level="1"/>
             <contents name="build-examples" title="Build examples" level="2"/>

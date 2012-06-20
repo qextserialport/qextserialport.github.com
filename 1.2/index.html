@@ -31,6 +31,9 @@
 </ul>
 <a name="getting-started"></a>
 <h2>Getting Started</h2>
+<p>This simplest way to play with this library is using Qt Creator. You can open the toplevel qextserialport.pro with Qt Creator, or open other xxxx.pro seperately.</p>
+<a name="build-into-user-application-directly"></a>
+<h3>Build into user application directly</h3>
 <p>The package contains a qextserialport.pri file that allows you to integrate the component into programs that use qmake for the build step.</p>
 <p>All you need is adding following line to your qmake's project file:</p>
 <pre class="cpp">    <span class="keyword">include</span>(pathToPri<span class="operator">/</span>qextserialport<span class="operator">.</span>pri)</pre>
@@ -49,8 +52,23 @@
         <span class="type"><a href="http://qt.nokia.com/doc/4.8/qbytearray.html">QByteArray</a></span> data <span class="operator">=</span> port<span class="operator">-</span><span class="operator">&gt;</span>readAll();
         processNewData(usbdata);
     }</pre>
-<a name="using-qexserialport-as-library"></a>
-<h3>Using QexSerialPort as library</h3>
+<a name="using-qexserialport-as-a-system-library"></a>
+<h3>Using QexSerialPort as a system library</h3>
+<p>Although <a href="qextserialport.html">QextSerialPort</a> can be directly compiled into your application, You may prefer to use QextSerailPort as an library, which is very easy too.</p>
+<p>1. Download the source code, and put it in any location you like.</p>
+<p>2. Goto qextserialport/buildlib, and run following command to generate library. (Yes, config.pri is not needed.)</p>
+<pre class="cpp">        qmake
+        make (<span class="keyword">or</span> nmake)
+        sudo make install (<span class="keyword">or</span> nmake install)</pre>
+<p>3. Add following line to your project's file</p>
+<pre class="cpp">        CONFIG <span class="operator">+</span><span class="operator">=</span> extserialport</pre>
+<p>4. Using <a href="qextserialport.html">QextSerialPort</a> in your code. Enjoy it!</p>
+<pre class="cpp">        <span class="preprocessor">#include &quot;qextserialport.h&quot;</span>
+        <span class="operator">.</span><span class="operator">.</span><span class="operator">.</span><span class="operator">.</span>
+        QextSerialPort <span class="operator">*</span> port <span class="operator">=</span> <span class="keyword">new</span> QextSerialPort();
+        <span class="operator">.</span><span class="operator">.</span><span class="operator">.</span><span class="operator">.</span></pre>
+<a name="using-qexserialport-as-a-non-system-library"></a>
+<h3>Using QexSerialPort as a non-system library</h3>
 <p>Although <a href="qextserialport.html">QextSerialPort</a> can be directly compiled into your application, You may prefer to use QextSerailPort as an library, which is very easy too.</p>
 <p>1. Write a config.pri file.(read config_example.pri for reference):</p>
 <ul>
