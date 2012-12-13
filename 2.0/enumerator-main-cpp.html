@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>QtExtSerialPort 2.0: main.cpp Example File (enumerator/main.cpp)</title>
+  <link rel="stylesheet" type="text/css" href="style/offline.css" />
+</head>
+<body>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+<h1 class="title">main.cpp Example File</h1>
+<span class="small-subtitle">enumerator/main.cpp</span>
+<!-- $$$enumerator/main.cpp-description -->
+<div class="descr"> <a name="details"></a>
+<pre class="cpp"><span class="comment">/**
+ * @file main.cpp
+ * @brief Main file.
+ * @author Micha? Policht
+ */</span>
+<span class="preprocessor">#include &quot;qextserialenumerator.h&quot;</span>
+<span class="preprocessor">#include &lt;QtCore/QList&gt;</span>
+<span class="preprocessor">#include &lt;QtCore/QDebug&gt;</span>
+<span class="type">int</span> main()
+{
+    <span class="type"><a href="../qtcore/qlist.html">QList</a></span><span class="operator">&lt;</span>QextPortInfo<span class="operator">&gt;</span> ports <span class="operator">=</span> QextSerialEnumerator<span class="operator">::</span>getPorts();
+    <a href="../qtcore/qtglobal.html#qDebug">qDebug</a>() <span class="operator">&lt;</span><span class="operator">&lt;</span> <span class="string">&quot;List of ports:&quot;</span>;
+    foreach (QextPortInfo info<span class="operator">,</span> ports) {
+        <a href="../qtcore/qtglobal.html#qDebug">qDebug</a>() <span class="operator">&lt;</span><span class="operator">&lt;</span> <span class="string">&quot;port name:&quot;</span>       <span class="operator">&lt;</span><span class="operator">&lt;</span> info<span class="operator">.</span>portName;
+        <a href="../qtcore/qtglobal.html#qDebug">qDebug</a>() <span class="operator">&lt;</span><span class="operator">&lt;</span> <span class="string">&quot;friendly name:&quot;</span>   <span class="operator">&lt;</span><span class="operator">&lt;</span> info<span class="operator">.</span>friendName;
+        <a href="../qtcore/qtglobal.html#qDebug">qDebug</a>() <span class="operator">&lt;</span><span class="operator">&lt;</span> <span class="string">&quot;physical name:&quot;</span>   <span class="operator">&lt;</span><span class="operator">&lt;</span> info<span class="operator">.</span>physName;
+        <a href="../qtcore/qtglobal.html#qDebug">qDebug</a>() <span class="operator">&lt;</span><span class="operator">&lt;</span> <span class="string">&quot;enumerator name:&quot;</span> <span class="operator">&lt;</span><span class="operator">&lt;</span> info<span class="operator">.</span>enumName;
+        <a href="../qtcore/qtglobal.html#qDebug">qDebug</a>() <span class="operator">&lt;</span><span class="operator">&lt;</span> <span class="string">&quot;vendor ID:&quot;</span>       <span class="operator">&lt;</span><span class="operator">&lt;</span> info<span class="operator">.</span>vendorID;
+        <a href="../qtcore/qtglobal.html#qDebug">qDebug</a>() <span class="operator">&lt;</span><span class="operator">&lt;</span> <span class="string">&quot;product ID:&quot;</span>      <span class="operator">&lt;</span><span class="operator">&lt;</span> info<span class="operator">.</span>productID;
+
+        <a href="../qtcore/qtglobal.html#qDebug">qDebug</a>() <span class="operator">&lt;</span><span class="operator">&lt;</span> <span class="string">&quot;===================================&quot;</span>;
+    }
+    <span class="keyword">return</span> <span class="number">0</span>;
+}</pre>
+</div>
+<!-- @@@enumerator/main.cpp -->
+<hr />
+<table width="100%" cellspacing="0" border="0">
+<tr class="address">
+<td width="40%" align="left">Copyright &copy; 2000-2012</td>
+<td width="20%" align="center">
+<a href="http://code.google.com/p/qextserialport">QtExtSerialPort Project</a>
+</td>
+<td width="40%" align="right"><div align="right">QtExtSerialPort Manual</div></td>
+</tr>
+</table></body>
+</html>

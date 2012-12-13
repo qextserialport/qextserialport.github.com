@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QtHelpProject version="1.0">
+    <namespace>com.googlecode.qextserialport.200</namespace>
+    <virtualFolder>qtextserialport</virtualFolder>
+    <customFilter name="QtExtSerialPort 2.0.0">
+        <filterAttribute>qtextserialport</filterAttribute>
+        <filterAttribute>2.0.0</filterAttribute>
+    </customFilter>
+    <filterSection>
+        <filterAttribute>qtextserialport</filterAttribute>
+        <filterAttribute>qtrefdoc</filterAttribute>
+        <filterAttribute>2.0.0</filterAttribute>
+        <toc>
+            <section ref="qtextserialport-index.html" title="Qt ExtSerialPort">
+                <section ref="qtextserialport-module.html" title="C++ Classes">
+                    <section ref="portsettings.html" title="PortSettings Class Reference"/>
+                    <section ref="qextportinfo.html" title="QextPortInfo Class Reference"/>
+                    <section ref="qextserialenumerator.html" title="QextSerialEnumerator Class Reference">
+                        <section ref="qextserialenumerator-members.html" title="List of all members"/>
+                    </section>
+                    <section ref="qextserialport.html" title="QextSerialPort Class Reference">
+                        <section ref="qextserialport-members.html" title="List of all members"/>
+                    </section>
+                </section>
+                <section ref="qmlmodule-qtextserialport2-qtextserialport-2-0.html" title="QML Types">
+                    <section ref="portsettings.html" title="PortSettings Class Reference"/>
+                    <section ref="qextportinfo.html" title="QextPortInfo Class Reference"/>
+                    <section ref="qextserialenumerator.html" title="QextSerialEnumerator Class Reference">
+                        <section ref="qextserialenumerator-members.html" title="List of all members"/>
+                    </section>
+                    <section ref="qextserialport.html" title="QextSerialPort Class Reference">
+                        <section ref="qextserialport-members.html" title="List of all members"/>
+                    </section>
+                </section>
+            </section>
+        </toc>
+        <keywords>
+            <keyword name="ExtSerialPort" id="QML.ExtSerialPort" ref="qml-extserialport.html"/>
+            <keyword name="baudRate" id="ExtSerialPort::baudRate" ref="qml-extserialport.html#baudRate-prop"/>
+            <keyword name="connected" id="ExtSerialPort::connected" ref="qml-extserialport.html#connected-prop"/>
+            <keyword name="dataBits" id="ExtSerialPort::dataBits" ref="qml-extserialport.html#dataBits-prop"/>
+            <keyword name="flowControl" id="ExtSerialPort::flowControl" ref="qml-extserialport.html#flowControl-prop"/>
+            <keyword name="parity" id="ExtSerialPort::parity" ref="qml-extserialport.html#parity-prop"/>
+            <keyword name="portName" id="ExtSerialPort::portName" ref="qml-extserialport.html#portName-prop"/>
+            <keyword name="stopBits" id="ExtSerialPort::stopBits" ref="qml-extserialport.html#stopBits-prop"/>
+            <keyword name="stringCodec" id="ExtSerialPort::stringCodec" ref="qml-extserialport.html#stringCodec-prop"/>
+            <keyword name="stringData" id="ExtSerialPort::stringData" ref="qml-extserialport.html#stringData-prop"/>
+            <keyword name="ExtSerialPort UartAssistant Example" id="ExtSerialPort UartAssistant Example" ref="uartassistant.html"/>
+            <keyword name="ExtSerialPort enumerator Example" id="ExtSerialPort enumerator Example" ref="enumerator.html"/>
+            <keyword name="ExtSerialPort qespta Example" id="ExtSerialPort qespta Example" ref="qespta.html"/>
+            <keyword name="PortSettings" id="PortSettings" ref="portsettings.html"/>
+            <keyword name="BaudRate" id="PortSettings::BaudRate" ref="portsettings.html#BaudRate-var"/>
+            <keyword name="DataBits" id="PortSettings::DataBits" ref="portsettings.html#DataBits-var"/>
+            <keyword name="FlowControl" id="PortSettings::FlowControl" ref="portsettings.html#FlowControl-var"/>
+            <keyword name="Parity" id="PortSettings::Parity" ref="portsettings.html#Parity-var"/>
+            <keyword name="StopBits" id="PortSettings::StopBits" ref="portsettings.html#StopBits-var"/>
+            <keyword name="Timeout_Millisec" id="PortSettings::Timeout_Millisec" ref="portsettings.html#Timeout_Millisec-var"/>
+            <keyword name="QextPortInfo" id="QextPortInfo" ref="qextportinfo.html"/>
+            <keyword name="enumName" id="QextPortInfo::enumName" ref="qextportinfo.html#enumName-var"/>
+            <keyword name="friendName" id="QextPortInfo::friendName" ref="qextportinfo.html#friendName-var"/>
+            <keyword name="physName" id="QextPortInfo::physName" ref="qextportinfo.html#physName-var"/>
+            <keyword name="portName" id="QextPortInfo::portName" ref="qextportinfo.html#portName-var"/>
+            <keyword name="productID" id="QextPortInfo::productID" ref="qextportinfo.html#productID-var"/>
+            <keyword name="vendorID" id="QextPortInfo::vendorID" ref="qextportinfo.html#vendorID-var"/>
+            <keyword name="QextSerialEnumerator" id="QextSerialEnumerator" ref="qextserialenumerator.html"/>
+            <keyword name="deviceDiscovered" id="QextSerialEnumerator::deviceDiscovered" ref="qextserialenumerator.html#deviceDiscovered"/>
+            <keyword name="deviceRemoved" id="QextSerialEnumerator::deviceRemoved" ref="qextserialenumerator.html#deviceRemoved"/>
+            <keyword name="getPorts" id="QextSerialEnumerator::getPorts" ref="qextserialenumerator.html#getPorts"/>
+            <keyword name="setUpNotifications" id="QextSerialEnumerator::setUpNotifications" ref="qextserialenumerator.html#setUpNotifications"/>
+            <keyword name="~QextSerialEnumerator" id="QextSerialEnumerator::~QextSerialEnumerator" ref="qextserialenumerator.html#dtor.QextSerialEnumerator"/>
+            <keyword name="QextSerialPort" id="QextSerialPort" ref="qextserialport.html"/>
+            <keyword name="QextSerialPort::QueryMode" id="QextSerialPort::QueryMode" ref="qextserialport.html#QueryMode-enum"/>
+            <keyword name="QextSerialPort::Polling" id="QextSerialPort::Polling" ref="qextserialport.html#QueryMode-enum"/>
+            <keyword name="QextSerialPort::EventDriven" id="QextSerialPort::EventDriven" ref="qextserialport.html#QueryMode-enum"/>
+            <keyword name="baudRate" id="QextSerialPort::baudRate" ref="qextserialport.html#baudRate"/>
+            <keyword name="bytesAvailable" id="QextSerialPort::bytesAvailable" ref="qextserialport.html#bytesAvailable"/>
+            <keyword name="canReadLine" id="QextSerialPort::canReadLine" ref="qextserialport.html#canReadLine"/>
+            <keyword name="close" id="QextSerialPort::close" ref="qextserialport.html#close"/>
+            <keyword name="dataBits" id="QextSerialPort::dataBits" ref="qextserialport.html#dataBits"/>
+            <keyword name="dsrChanged" id="QextSerialPort::dsrChanged" ref="qextserialport.html#dsrChanged"/>
+            <keyword name="errorString" id="QextSerialPort::errorString" ref="qextserialport.html#errorString"/>
+            <keyword name="flowControl" id="QextSerialPort::flowControl" ref="qextserialport.html#flowControl"/>
+            <keyword name="flush" id="QextSerialPort::flush" ref="qextserialport.html#flush"/>
+            <keyword name="isSequential" id="QextSerialPort::isSequential" ref="qextserialport.html#isSequential"/>
+            <keyword name="lastError" id="QextSerialPort::lastError" ref="qextserialport.html#lastError"/>
+            <keyword name="lineStatus" id="QextSerialPort::lineStatus" ref="qextserialport.html#lineStatus"/>
+            <keyword name="open" id="QextSerialPort::open" ref="qextserialport.html#open"/>
+            <keyword name="parity" id="QextSerialPort::parity" ref="qextserialport.html#parity"/>
+            <keyword name="portName" id="QextSerialPort::portName" ref="qextserialport.html#portName-prop"/>
+            <keyword name="queryMode" id="QextSerialPort::queryMode" ref="qextserialport.html#queryMode-prop"/>
+            <keyword name="readAll" id="QextSerialPort::readAll" ref="qextserialport.html#readAll"/>
+            <keyword name="readData" id="QextSerialPort::readData" ref="qextserialport.html#readData"/>
+            <keyword name="setBaudRate" id="QextSerialPort::setBaudRate" ref="qextserialport.html#setBaudRate"/>
+            <keyword name="setDataBits" id="QextSerialPort::setDataBits" ref="qextserialport.html#setDataBits"/>
+            <keyword name="setDtr" id="QextSerialPort::setDtr" ref="qextserialport.html#setDtr"/>
+            <keyword name="setFlowControl" id="QextSerialPort::setFlowControl" ref="qextserialport.html#setFlowControl"/>
+            <keyword name="setParity" id="QextSerialPort::setParity" ref="qextserialport.html#setParity"/>
+            <keyword name="setPortName" id="QextSerialPort::setPortName" ref="qextserialport.html#portName-prop"/>
+            <keyword name="setQueryMode" id="QextSerialPort::setQueryMode" ref="qextserialport.html#queryMode-prop"/>
+            <keyword name="setRts" id="QextSerialPort::setRts" ref="qextserialport.html#setRts"/>
+            <keyword name="setStopBits" id="QextSerialPort::setStopBits" ref="qextserialport.html#setStopBits"/>
+            <keyword name="setTimeout" id="QextSerialPort::setTimeout" ref="qextserialport.html#setTimeout"/>
+            <keyword name="stopBits" id="QextSerialPort::stopBits" ref="qextserialport.html#stopBits"/>
+            <keyword name="writeData" id="QextSerialPort::writeData" ref="qextserialport.html#writeData"/>
+            <keyword name="~QextSerialPort" id="QextSerialPort::~QextSerialPort" ref="qextserialport.html#dtor.QextSerialPort"/>
+            <keyword name="Qt ExtSerialPort" id="Qt ExtSerialPort" ref="qtextserialport-index.html"/>
+            <keyword name="Qt ExtSerialPort C++ Classes" id="Qt ExtSerialPort C++ Classes" ref="qtextserialport-module.html"/>
+            <keyword name="Qt ExtSerialPort QML Types" id="Qt ExtSerialPort QML Types" ref="qmlmodule-qtextserialport2-qtextserialport-2-0.html"/>
+        </keywords>
+        <files>
+            <file>qespta-mainwindow-h.html</file>
+            <file>qextportinfo.html</file>
+            <file>enumerator-enumerator-pro.html</file>
+            <file>qtextserialport-module.html</file>
+            <file>uartassistant-dialog-h.html</file>
+            <file>uartassistant-uartassistant-pro.html</file>
+            <file>qespta-qesptest-cpp.html</file>
+            <file>enumerator-main-cpp.html</file>
+            <file>qextserialport.html</file>
+            <file>uartassistant-hled-h.html</file>
+            <file>qespta-messagewindow-h.html</file>
+            <file>qespta-main-cpp.html</file>
+            <file>qextserialenumerator-members.html</file>
+            <file>qespta.html</file>
+            <file>portsettings.html</file>
+            <file>qespta-qespta-pro.html</file>
+            <file>qml-extserialport.html</file>
+            <file>uartassistant.html</file>
+            <file>qtextserialport-index.html</file>
+            <file>uartassistant-hled-cpp.html</file>
+            <file>qextserialenumerator.html</file>
+            <file>qespta-qesptest-h.html</file>
+            <file>images/uartassistant.png</file>
+            <file>qmlmodule-qtextserialport2-qtextserialport-2-0.html</file>
+            <file>uartassistant-main-cpp.html</file>
+            <file>qextserialport-members.html</file>
+            <file>uartassistant-dialog-ui.html</file>
+            <file>qespta-mainwindow-cpp.html</file>
+            <file>enumerator.html</file>
+            <file>uartassistant-dialog-cpp.html</file>
+            <file>qespta-messagewindow-cpp.html</file>
+            <file>template/style/offline.css</file>
+            <file>images/uartassistant.png</file>
+        </files>
+    </filterSection>
+</QtHelpProject>

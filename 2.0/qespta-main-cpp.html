@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>QtExtSerialPort 2.0: main.cpp Example File (qespta/main.cpp)</title>
+  <link rel="stylesheet" type="text/css" href="style/offline.css" />
+</head>
+<body>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+<h1 class="title">main.cpp Example File</h1>
+<span class="small-subtitle">qespta/main.cpp</span>
+<!-- $$$qespta/main.cpp-description -->
+<div class="descr"> <a name="details"></a>
+<pre class="cpp"><span class="comment">/**
+ * @file main.cpp
+ * @brief Main file.
+ * @author Micha? Policht
+ */</span>
+
+<span class="preprocessor">#include &lt;QApplication&gt;</span>
+<span class="preprocessor">#include &quot;MainWindow.h&quot;</span>
+<span class="preprocessor">#include &quot;MessageWindow.h&quot;</span>
+
+<span class="type">int</span> main(<span class="type">int</span> argc<span class="operator">,</span> <span class="type">char</span> <span class="operator">*</span>argv<span class="operator">[</span><span class="operator">]</span>)
+{
+    <span class="type">QApplication</span> app(argc<span class="operator">,</span> argv);
+<span class="preprocessor">#if QT_VERSION &lt; QT_VERSION_CHECK(5,0,0)</span>
+    <span class="comment">//redirect debug messages to the MessageWindow dialog</span>
+    <a href="../qtcore/qtglobal.html#qInstallMsgHandler">qInstallMsgHandler</a>(MessageWindow<span class="operator">::</span>AppendMsgWrapper);
+<span class="preprocessor">#else</span>
+    <a href="../qtcore/qtglobal.html#qInstallMessageHandler">qInstallMessageHandler</a>(MessageWindow<span class="operator">::</span>AppendMsgWrapper);
+<span class="preprocessor">#endif</span>
+
+    MainWindow mainWindow;
+    mainWindow<span class="operator">.</span>show();
+
+    <span class="keyword">return</span> app<span class="operator">.</span>exec();
+}</pre>
+</div>
+<!-- @@@qespta/main.cpp -->
+<hr />
+<table width="100%" cellspacing="0" border="0">
+<tr class="address">
+<td width="40%" align="left">Copyright &copy; 2000-2012</td>
+<td width="20%" align="center">
+<a href="http://code.google.com/p/qextserialport">QtExtSerialPort Project</a>
+</td>
+<td width="40%" align="right"><div align="right">QtExtSerialPort Manual</div></td>
+</tr>
+</table></body>
+</html>

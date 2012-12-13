@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <instructionals module="QtExtSerialPort">
     <examples>
-        <example name="QtExtSerialPort QML-Api Demo" docUrl="qthelp:////examples-qesp-quick.html" projectPath="examples/qesp_quick/qesp_quick.pro">
+        <example name="ExtSerialPort UartAssistant Example" docUrl="qthelp://com.googlecode.qextserialport.200/qtextserialport/uartassistant.html" projectPath="uartassistant/uartassistant.pro" imageUrl="qthelp://com.googlecode.qextserialport.200/qtextserialport/images/uartassistant.png">
             <description><![CDATA[No description available]]></description>
-            <tags>qtextserialport,qml-api,demo</tags>
-            <fileToOpen>examples/qesp_quick/main.cpp</fileToOpen>
+            <tags>extserialport,uartassistant</tags>
+            <fileToOpen>uartassistant/main.cpp</fileToOpen>
         </example>
-        <example name="UartAssistant Demo" docUrl="qthelp:////examples-uartassistant.html" projectPath="examples/uartassistant/uartassistant.pro" imageUrl="qthelp:////images/uartassistant.png">
+        <example name="ExtSerialPort enumerator Example" docUrl="qthelp://com.googlecode.qextserialport.200/qtextserialport/enumerator.html" projectPath="enumerator/enumerator.pro">
             <description><![CDATA[No description available]]></description>
-            <tags>uartassistant,demo</tags>
-            <fileToOpen>examples/uartassistant/main.cpp</fileToOpen>
+            <tags>extserialport,enumerator</tags>
+            <fileToOpen>enumerator/main.cpp</fileToOpen>
         </example>
-        <example name="enumerator Demo" docUrl="qthelp:////examples-enumerator.html" projectPath="examples/enumerator/enumerator.pro">
+        <example name="ExtSerialPort qespta Example" docUrl="qthelp://com.googlecode.qextserialport.200/qtextserialport/qespta.html" projectPath="qespta/qespta.pro">
             <description><![CDATA[No description available]]></description>
-            <tags>enumerator,demo</tags>
-            <fileToOpen>examples/enumerator/main.cpp</fileToOpen>
+            <tags>extserialport,qespta</tags>
+            <fileToOpen>qespta/main.cpp</fileToOpen>
         </example>
     </examples>
 </instructionals>

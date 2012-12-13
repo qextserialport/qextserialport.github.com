@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>QtExtSerialPort 2.0: MessageWindow.h Example File (qespta/MessageWindow.h)</title>
+  <link rel="stylesheet" type="text/css" href="style/offline.css" />
+</head>
+<body>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+<h1 class="title">MessageWindow.h Example File</h1>
+<span class="small-subtitle">qespta/MessageWindow.h</span>
+<!-- $$$qespta/MessageWindow.h-description -->
+<div class="descr"> <a name="details"></a>
+<pre class="cpp"><span class="comment">/**
+ * @file MessageWindow.h
+ * @brief Message Window.
+ * @see MessageWindow
+ * @author Micha? Policht
+ */</span>
+
+<span class="preprocessor">#ifndef MESSAGEWINDOW_H_</span>
+<span class="preprocessor">#define MESSAGEWINDOW_H_</span>
+
+<span class="preprocessor">#include &lt;QDockWidget&gt;</span>
+<span class="preprocessor">#include &lt;QTextEdit&gt;</span>
+<span class="preprocessor">#include &lt;QEvent&gt;</span>
+
+<span class="comment">/**
+ * Message Window. Handling errors and other messages.
+ */</span>
+<span class="keyword">class</span> MessageWindow: <span class="keyword">public</span> <span class="type">QDockWidget</span>
+{
+    Q_OBJECT
+
+    <span class="type">QTextEdit</span> msgTextEdit;              <span class="comment">///&lt; Main widget.</span>
+    <span class="keyword">static</span> MessageWindow <span class="operator">*</span>MsgHandler;   <span class="comment">///&lt; Set in constructor.</span>
+    <span class="keyword">static</span> <span class="keyword">const</span> <span class="type">char</span> <span class="operator">*</span>WINDOW_TITLE;    <span class="comment">///&lt; Window title.</span>
+
+<span class="keyword">private</span>:
+    <span class="keyword">static</span> <span class="type"><a href="../qtcore/qstring.html">QString</a></span> <span class="type">QtMsgToQString</span>(<span class="type"><a href="../qtcore/qtglobal.html#QtMsgType-enum">QtMsgType</a></span> type<span class="operator">,</span> <span class="keyword">const</span> <span class="type">char</span> <span class="operator">*</span>msg);
+
+<span class="keyword">protected</span>:
+    <span class="comment">/**
+         * Handle custom events. MessageWindow hadles custom events listed in
+         * EventType enum.
+         */</span>
+    <span class="keyword">virtual</span> <span class="type">void</span> customEvent(<span class="type"><a href="../qtcore/qevent.html">QEvent</a></span><span class="operator">*</span> event);
+
+<span class="keyword">public</span>:
+    <span class="keyword">enum</span> EventType {MessageEventType <span class="operator">=</span> <span class="type"><a href="../qtcore/qevent.html">QEvent</a></span><span class="operator">::</span>User};    <span class="comment">///&lt; Custom event types.</span>
+
+    <span class="comment">/**
+         * Default constructor.
+         *     @param parent parent widget.
+         *     @param flags widget flags.
+         */</span>
+    MessageWindow(<span class="type">QWidget</span><span class="operator">*</span> parent <span class="operator">=</span> <span class="number">0</span><span class="operator">,</span> <span class="type"><a href="../qtcore/qt.html">Qt</a></span><span class="operator">::</span>WindowFlags flags <span class="operator">=</span> <span class="number">0</span>);
+
+    <span class="comment">/**
+         * Append message wrapper. Since ISO forbids casting member functions
+         * to C functions, wrapper is needed to use this class as QtMsgHandler.
+         * This method is thread-safe but not reentrant.
+         *     @param type message type.
+         *     @param msg message string.
+         */</span>
+    <span class="keyword">static</span> <span class="type">void</span> AppendMsgWrapper(<span class="type"><a href="../qtcore/qtglobal.html#QtMsgType-enum">QtMsgType</a></span> type<span class="operator">,</span> <span class="keyword">const</span> <span class="type">char</span> <span class="operator">*</span>msg);
+<span class="preprocessor">#if QT_VERSION &gt;= QT_VERSION_CHECK(5,0,0)</span>
+    <span class="keyword">static</span> <span class="type">void</span> AppendMsgWrapper(<span class="type"><a href="../qtcore/qtglobal.html#QtMsgType-enum">QtMsgType</a></span> type<span class="operator">,</span> <span class="keyword">const</span> <span class="type"><a href="../qtcore/qtglobal-qtglobal.html">QMessageLogContext</a></span> <span class="operator">&amp;</span>context<span class="operator">,</span> <span class="keyword">const</span> <span class="type"><a href="../qtcore/qstring.html">QString</a></span> <span class="operator">&amp;</span>msg);
+<span class="preprocessor">#endif</span>
+    <span class="comment">/**
+         * Post message event to the main event loop. This function encapsulates
+         * message into MessageEvent object and passes it to the main event loop.
+         *     @param type message type.
+         *     @param msg message string.
+         */</span>
+    <span class="type">void</span> postMsgEvent(<span class="type"><a href="../qtcore/qtglobal.html#QtMsgType-enum">QtMsgType</a></span> type<span class="operator">,</span> <span class="keyword">const</span> <span class="type">char</span> <span class="operator">*</span>msg);
+
+};
+
+<span class="comment">/**
+ * Message Event. Custom event used by @ref MessageWindow to provide multi-threaded
+ * access. Encapsulates message inside @a msg variable.
+ */</span>
+<span class="keyword">class</span> MessageEvent: <span class="keyword">public</span> <span class="type"><a href="../qtcore/qevent.html">QEvent</a></span>
+{
+<span class="keyword">public</span>:
+    <span class="type"><a href="../qtcore/qstring.html">QString</a></span> msg;    <span class="comment">///&lt; Message string.</span>
+
+    <span class="comment">/**
+         * Contructor.
+         *     @param msg message to post.
+         */</span>
+    MessageEvent(<span class="type"><a href="../qtcore/qstring.html">QString</a></span> <span class="operator">&amp;</span>msg);
+};
+
+<span class="preprocessor">#endif /*MESSAGEWINDOW_H_*/</span></pre>
+</div>
+<!-- @@@qespta/MessageWindow.h -->
+<hr />
+<table width="100%" cellspacing="0" border="0">
+<tr class="address">
+<td width="40%" align="left">Copyright &copy; 2000-2012</td>
+<td width="20%" align="center">
+<a href="http://code.google.com/p/qextserialport">QtExtSerialPort Project</a>
+</td>
+<td width="40%" align="right"><div align="right">QtExtSerialPort Manual</div></td>
+</tr>
+</table></body>
+</html>

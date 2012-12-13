@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>QtExtSerialPort 2.0: QespTest.h Example File (qespta/QespTest.h)</title>
+  <link rel="stylesheet" type="text/css" href="style/offline.css" />
+</head>
+<body>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+<h1 class="title">QespTest.h Example File</h1>
+<span class="small-subtitle">qespta/QespTest.h</span>
+<!-- $$$qespta/QespTest.h-description -->
+<div class="descr"> <a name="details"></a>
+<pre class="cpp"><span class="comment">/* qesptest.h
+**************************************/</span>
+<span class="preprocessor">#ifndef _QESPTEST_H_</span>
+<span class="preprocessor">#define _QESPTEST_H_</span>
+
+<span class="preprocessor">#include &lt;QWidget&gt;</span>
+
+<span class="keyword">class</span> <span class="type">QLineEdit</span>;
+<span class="keyword">class</span> <span class="type">QTextEdit</span>;
+<span class="keyword">class</span> QextSerialPort;
+<span class="keyword">class</span> <span class="type">QSpinBox</span>;
+
+<span class="keyword">class</span> QespTest :  <span class="keyword">public</span> <span class="type">QWidget</span>
+{
+    Q_OBJECT
+<span class="keyword">public</span>:
+    QespTest(<span class="type">QWidget</span> <span class="operator">*</span>parent<span class="operator">=</span><span class="number">0</span>);
+
+    <span class="keyword">virtual</span> <span class="operator">~</span>QespTest();
+
+<span class="keyword">private</span>:
+    <span class="type">QLineEdit</span> <span class="operator">*</span>message;
+    <span class="type">QSpinBox</span> <span class="operator">*</span>delaySpinBox;
+    <span class="type">QTextEdit</span> <span class="operator">*</span>received_msg;
+    QextSerialPort <span class="operator">*</span>port;
+
+<span class="keyword">private</span> <span class="keyword">slots</span>:
+    <span class="type">void</span> transmitMsg();
+    <span class="type">void</span> receiveMsg();
+    <span class="type">void</span> appendCR();
+    <span class="type">void</span> appendLF();
+    <span class="type">void</span> closePort();
+    <span class="type">void</span> openPort();
+};
+
+<span class="preprocessor">#endif</span></pre>
+</div>
+<!-- @@@qespta/QespTest.h -->
+<hr />
+<table width="100%" cellspacing="0" border="0">
+<tr class="address">
+<td width="40%" align="left">Copyright &copy; 2000-2012</td>
+<td width="20%" align="center">
+<a href="http://code.google.com/p/qextserialport">QtExtSerialPort Project</a>
+</td>
+<td width="40%" align="right"><div align="right">QtExtSerialPort Manual</div></td>
+</tr>
+</table></body>
+</html>
