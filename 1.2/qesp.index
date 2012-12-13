@@ -30,12 +30,14 @@
             <contents name="overview" title="Overview" level="1"/>
             <contents name="classes" title="Classes" level="1"/>
             <contents name="getting-started" title="Getting Started" level="1"/>
-            <contents name="build-into-user-application-directly" title="Build into user application directly" level="2"/>
-            <contents name="using-qexserialport-as-a-system-library" title="Using QexSerialPort as a system library" level="2"/>
-            <contents name="using-qexserialport-as-a-non-system-library" title="Using QexSerialPort as a non-system library" level="2"/>
+            <contents name="usage-1-source-code-only" title="Usage(1): Source Code Only" level="2"/>
+            <contents name="usage-2-shared-library" title="Usage(2): shared library" level="2"/>
+            <contents name="usage-3-static-library" title="Usage(3): Static library" level="2"/>
+            <contents name="platform-special" title="Platform Special" level="1"/>
+            <contents name="for-macx-build-as-framework" title="For MacX: Build as framework" level="2"/>
+            <contents name="for-linux-enable-udev" title="For Linux: Enable udev" level="2"/>
             <contents name="build-documents" title="Build documents" level="2"/>
             <contents name="examples" title="Examples" level="1"/>
-            <contents name="build-examples" title="Build examples" level="2"/>
             <contents name="resources" title="Resources" level="1"/>
             <contents name="nokia-trolltech" title="Nokia(Trolltech)" level="2"/>
             <contents name="msdn" title="MSDN" level="2"/>

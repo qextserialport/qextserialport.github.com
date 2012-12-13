@@ -19,16 +19,16 @@
     {
     <span class="keyword">public</span>:
         Private()
-            : darkerFactor(<span class="number">300</span>)<span class="operator">,</span> color(<span class="type"><a href="http://qt.nokia.com/doc/4.8/qt.html">Qt</a></span><span class="operator">::</span>green)<span class="operator">,</span> isOn(<span class="keyword">true</span>)
+            : darkerFactor(<span class="number">300</span>)<span class="operator">,</span> color(<span class="type"><a href="http://qt-project.org/doc/qt-4.8/qt.html">Qt</a></span><span class="operator">::</span>green)<span class="operator">,</span> isOn(<span class="keyword">true</span>)
         { }
 
         <span class="type">int</span> darkerFactor;
-        <span class="type"><a href="http://qt.nokia.com/doc/4.8/qcolor.html">QColor</a></span> color;
+        <span class="type"><a href="http://qt-project.org/doc/qt-4.8/qcolor.html">QColor</a></span> color;
         <span class="type">bool</span> isOn;
     };
 
-    HLed<span class="operator">::</span>HLed(<span class="type"><a href="http://qt.nokia.com/doc/4.8/qwidget.html">QWidget</a></span> <span class="operator">*</span>parent)
-        :<span class="type"><a href="http://qt.nokia.com/doc/4.8/qwidget.html">QWidget</a></span>(parent)<span class="operator">,</span> m_d(<span class="keyword">new</span> Private)
+    HLed<span class="operator">::</span>HLed(<span class="type"><a href="http://qt-project.org/doc/qt-4.8/qwidget.html">QWidget</a></span> <span class="operator">*</span>parent)
+        :<span class="type"><a href="http://qt-project.org/doc/qt-4.8/qwidget.html">QWidget</a></span>(parent)<span class="operator">,</span> m_d(<span class="keyword">new</span> Private)
     {
     }
 
@@ -37,26 +37,26 @@
         <span class="keyword">delete</span> m_d;
     }
 
-    <span class="type"><a href="http://qt.nokia.com/doc/4.8/qcolor.html">QColor</a></span> HLed<span class="operator">::</span>color() <span class="keyword">const</span>
+    <span class="type"><a href="http://qt-project.org/doc/qt-4.8/qcolor.html">QColor</a></span> HLed<span class="operator">::</span>color() <span class="keyword">const</span>
     {
         <span class="keyword">return</span> m_d<span class="operator">-</span><span class="operator">&gt;</span>color;
     }
 
-    <span class="type">void</span> HLed<span class="operator">::</span>setColor(<span class="keyword">const</span> <span class="type"><a href="http://qt.nokia.com/doc/4.8/qcolor.html">QColor</a></span> <span class="operator">&amp;</span>color)
+    <span class="type">void</span> HLed<span class="operator">::</span>setColor(<span class="keyword">const</span> <span class="type"><a href="http://qt-project.org/doc/qt-4.8/qcolor.html">QColor</a></span> <span class="operator">&amp;</span>color)
     {
         <span class="keyword">if</span> (m_d<span class="operator">-</span><span class="operator">&gt;</span>color <span class="operator">=</span><span class="operator">=</span> color)
             <span class="keyword">return</span>;
         update();
     }
 
-    <span class="type"><a href="http://qt.nokia.com/doc/4.8/qsize.html">QSize</a></span> HLed<span class="operator">::</span>sizeHint() <span class="keyword">const</span>
+    <span class="type"><a href="http://qt-project.org/doc/qt-4.8/qsize.html">QSize</a></span> HLed<span class="operator">::</span>sizeHint() <span class="keyword">const</span>
     {
-        <span class="keyword">return</span> <span class="type"><a href="http://qt.nokia.com/doc/4.8/qsize.html">QSize</a></span>(<span class="number">20</span><span class="operator">,</span> <span class="number">20</span>);
+        <span class="keyword">return</span> <span class="type"><a href="http://qt-project.org/doc/qt-4.8/qsize.html">QSize</a></span>(<span class="number">20</span><span class="operator">,</span> <span class="number">20</span>);
     }
 
-    <span class="type"><a href="http://qt.nokia.com/doc/4.8/qsize.html">QSize</a></span> HLed<span class="operator">::</span>minimumSizeHint() <span class="keyword">const</span>
+    <span class="type"><a href="http://qt-project.org/doc/qt-4.8/qsize.html">QSize</a></span> HLed<span class="operator">::</span>minimumSizeHint() <span class="keyword">const</span>
     {
-        <span class="keyword">return</span> <span class="type"><a href="http://qt.nokia.com/doc/4.8/qsize.html">QSize</a></span>(<span class="number">16</span><span class="operator">,</span> <span class="number">16</span>);
+        <span class="keyword">return</span> <span class="type"><a href="http://qt-project.org/doc/qt-4.8/qsize.html">QSize</a></span>(<span class="number">16</span><span class="operator">,</span> <span class="number">16</span>);
     }
 
     <span class="type">void</span> HLed<span class="operator">::</span>toggle()
@@ -76,24 +76,24 @@
         turnOn(<span class="operator">!</span>off);
     }
 
-    <span class="type">void</span> HLed<span class="operator">::</span>paintEvent(<span class="type"><a href="http://qt.nokia.com/doc/4.8/qpaintevent.html">QPaintEvent</a></span><span class="operator">*</span> <span class="comment">/* event*/</span>)
+    <span class="type">void</span> HLed<span class="operator">::</span>paintEvent(<span class="type"><a href="http://qt-project.org/doc/qt-4.8/qpaintevent.html">QPaintEvent</a></span> <span class="operator">*</span> <span class="comment">/*event*/</span>)
     {
         <span class="type">int</span> width <span class="operator">=</span> ledWidth();
 
-        <span class="type"><a href="http://qt.nokia.com/doc/4.8/qpainter.html">QPainter</a></span> painter(<span class="keyword">this</span>);
-        painter<span class="operator">.</span>setRenderHint(<span class="type"><a href="http://qt.nokia.com/doc/4.8/qpainter.html">QPainter</a></span><span class="operator">::</span>Antialiasing);
+        <span class="type"><a href="http://qt-project.org/doc/qt-4.8/qpainter.html">QPainter</a></span> painter(<span class="keyword">this</span>);
+        painter<span class="operator">.</span>setRenderHint(<span class="type"><a href="http://qt-project.org/doc/qt-4.8/qpainter.html">QPainter</a></span><span class="operator">::</span>Antialiasing);
 
-        <span class="type"><a href="http://qt.nokia.com/doc/4.8/qcolor.html">QColor</a></span> color <span class="operator">=</span> m_d<span class="operator">-</span><span class="operator">&gt;</span>isOn <span class="operator">?</span> m_d<span class="operator">-</span><span class="operator">&gt;</span>color
+        <span class="type"><a href="http://qt-project.org/doc/qt-4.8/qcolor.html">QColor</a></span> color <span class="operator">=</span> m_d<span class="operator">-</span><span class="operator">&gt;</span>isOn <span class="operator">?</span> m_d<span class="operator">-</span><span class="operator">&gt;</span>color
                                  : m_d<span class="operator">-</span><span class="operator">&gt;</span>color<span class="operator">.</span>darker(m_d<span class="operator">-</span><span class="operator">&gt;</span>darkerFactor);
 
-        <span class="type"><a href="http://qt.nokia.com/doc/4.8/qbrush.html">QBrush</a></span> brush;
-        brush<span class="operator">.</span>setStyle(<span class="type"><a href="http://qt.nokia.com/doc/4.8/qt.html">Qt</a></span><span class="operator">::</span>SolidPattern);
+        <span class="type"><a href="http://qt-project.org/doc/qt-4.8/qbrush.html">QBrush</a></span> brush;
+        brush<span class="operator">.</span>setStyle(<span class="type"><a href="http://qt-project.org/doc/qt-4.8/qt.html">Qt</a></span><span class="operator">::</span>SolidPattern);
         brush<span class="operator">.</span>setColor(color);
         painter<span class="operator">.</span>setBrush(brush);
         <span class="comment">// draw plain</span>
         painter<span class="operator">.</span>drawEllipse(<span class="number">1</span><span class="operator">,</span> <span class="number">1</span><span class="operator">,</span> width<span class="operator">-</span><span class="number">1</span><span class="operator">,</span> width<span class="operator">-</span><span class="number">1</span>);
 
-        <span class="type"><a href="http://qt.nokia.com/doc/4.8/qpen.html">QPen</a></span> pen;
+        <span class="type"><a href="http://qt-project.org/doc/qt-4.8/qpen.html">QPen</a></span> pen;
         pen<span class="operator">.</span>setWidth(<span class="number">2</span>);
 
         <span class="type">int</span> pos <span class="operator">=</span> width <span class="operator">/</span> <span class="number">5</span> <span class="operator">+</span> <span class="number">1</span>;
@@ -123,10 +123,10 @@
         }
 
         <span class="comment">//draw border</span>
-        painter<span class="operator">.</span>setBrush(<span class="type"><a href="http://qt.nokia.com/doc/4.8/qt.html">Qt</a></span><span class="operator">::</span>NoBrush);
+        painter<span class="operator">.</span>setBrush(<span class="type"><a href="http://qt-project.org/doc/qt-4.8/qt.html">Qt</a></span><span class="operator">::</span>NoBrush);
 
         <span class="type">int</span> angle <span class="operator">=</span> <span class="operator">-</span><span class="number">720</span>;
-        color <span class="operator">=</span> palette()<span class="operator">.</span>color(<span class="type"><a href="http://qt.nokia.com/doc/4.8/qpalette.html">QPalette</a></span><span class="operator">::</span>Light);
+        color <span class="operator">=</span> palette()<span class="operator">.</span>color(<span class="type"><a href="http://qt-project.org/doc/qt-4.8/qpalette.html">QPalette</a></span><span class="operator">::</span>Light);
 
         <span class="keyword">for</span> (<span class="type">int</span> arc<span class="operator">=</span><span class="number">120</span>; arc<span class="operator">&lt;</span><span class="number">2880</span>; arc<span class="operator">+</span><span class="operator">=</span><span class="number">240</span>) {
             pen<span class="operator">.</span>setColor(color);
@@ -140,7 +140,7 @@
 
     <span class="type">int</span> HLed<span class="operator">::</span>ledWidth() <span class="keyword">const</span>
     {
-        <span class="type">int</span> width <span class="operator">=</span> <a href="http://qt.nokia.com/doc/4.8/qtglobal.html#qMin">qMin</a>(<span class="keyword">this</span><span class="operator">-</span><span class="operator">&gt;</span>width()<span class="operator">,</span> <span class="keyword">this</span><span class="operator">-</span><span class="operator">&gt;</span>height());
+        <span class="type">int</span> width <span class="operator">=</span> <a href="http://qt-project.org/doc/qt-4.8/qtglobal.html#qMin">qMin</a>(<span class="keyword">this</span><span class="operator">-</span><span class="operator">&gt;</span>width()<span class="operator">,</span> <span class="keyword">this</span><span class="operator">-</span><span class="operator">&gt;</span>height());
         width <span class="operator">-</span><span class="operator">=</span> <span class="number">2</span>;
         <span class="keyword">return</span> width <span class="operator">&gt;</span> <span class="number">0</span> <span class="operator">?</span> width : <span class="number">0</span>;
     }</pre>

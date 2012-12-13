@@ -24,12 +24,16 @@
 
     <span class="type">int</span> main(<span class="type">int</span> argc<span class="operator">,</span> <span class="type">char</span> <span class="operator">*</span>argv<span class="operator">[</span><span class="operator">]</span>)
     {
-            <span class="type"><a href="http://qt.nokia.com/doc/4.8/qapplication.html">QApplication</a></span> app(argc<span class="operator">,</span> argv);
+        <span class="type"><a href="http://qt-project.org/doc/qt-4.8/qapplication.html">QApplication</a></span> app(argc<span class="operator">,</span> argv);
+    <span class="preprocessor">#if QT_VERSION &lt; QT_VERSION_CHECK(5,0,0)</span>
         <span class="comment">//redirect debug messages to the MessageWindow dialog</span>
-            <a href="http://qt.nokia.com/doc/4.8/qtglobal.html#qInstallMsgHandler">qInstallMsgHandler</a>(MessageWindow<span class="operator">::</span>AppendMsgWrapper);
+        <a href="http://qt-project.org/doc/qt-4.8/qtglobal.html#qInstallMsgHandler">qInstallMsgHandler</a>(MessageWindow<span class="operator">::</span>AppendMsgWrapper);
+    <span class="preprocessor">#else</span>
+        qInstallMessageHandler(MessageWindow<span class="operator">::</span>AppendMsgWrapper);
+    <span class="preprocessor">#endif</span>
 
         MainWindow mainWindow;
-            mainWindow<span class="operator">.</span>show();
+        mainWindow<span class="operator">.</span>show();
 
         <span class="keyword">return</span> app<span class="operator">.</span>exec();
     }</pre>

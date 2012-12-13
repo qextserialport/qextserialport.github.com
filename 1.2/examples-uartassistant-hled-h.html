@@ -17,27 +17,27 @@
 
     <span class="preprocessor">#include &lt;QWidget&gt;</span>
 
-    <span class="keyword">class</span> <span class="type"><a href="http://qt.nokia.com/doc/4.8/qcolor.html">QColor</a></span>;
+    <span class="keyword">class</span> <span class="type"><a href="http://qt-project.org/doc/qt-4.8/qcolor.html">QColor</a></span>;
 
-    <span class="keyword">class</span> HLed : <span class="keyword">public</span> <span class="type"><a href="http://qt.nokia.com/doc/4.8/qwidget.html">QWidget</a></span>
+    <span class="keyword">class</span> HLed : <span class="keyword">public</span> <span class="type"><a href="http://qt-project.org/doc/qt-4.8/qwidget.html">QWidget</a></span>
     {
         Q_OBJECT
     <span class="keyword">public</span>:
-        HLed(<span class="type"><a href="http://qt.nokia.com/doc/4.8/qwidget.html">QWidget</a></span> <span class="operator">*</span>parent <span class="operator">=</span> <span class="number">0</span>);
+        HLed(<span class="type"><a href="http://qt-project.org/doc/qt-4.8/qwidget.html">QWidget</a></span> <span class="operator">*</span>parent <span class="operator">=</span> <span class="number">0</span>);
         <span class="operator">~</span>HLed();
 
-        <span class="type"><a href="http://qt.nokia.com/doc/4.8/qcolor.html">QColor</a></span> color() <span class="keyword">const</span>;
-        <span class="type"><a href="http://qt.nokia.com/doc/4.8/qsize.html">QSize</a></span> sizeHint() <span class="keyword">const</span>;
-        <span class="type"><a href="http://qt.nokia.com/doc/4.8/qsize.html">QSize</a></span> minimumSizeHint() <span class="keyword">const</span>;
+        <span class="type"><a href="http://qt-project.org/doc/qt-4.8/qcolor.html">QColor</a></span> color() <span class="keyword">const</span>;
+        <span class="type"><a href="http://qt-project.org/doc/qt-4.8/qsize.html">QSize</a></span> sizeHint() <span class="keyword">const</span>;
+        <span class="type"><a href="http://qt-project.org/doc/qt-4.8/qsize.html">QSize</a></span> minimumSizeHint() <span class="keyword">const</span>;
 
     <span class="keyword">public</span> <span class="keyword">slots</span>:
-        <span class="type">void</span> setColor(<span class="keyword">const</span> <span class="type"><a href="http://qt.nokia.com/doc/4.8/qcolor.html">QColor</a></span> <span class="operator">&amp;</span>color);
+        <span class="type">void</span> setColor(<span class="keyword">const</span> <span class="type"><a href="http://qt-project.org/doc/qt-4.8/qcolor.html">QColor</a></span> <span class="operator">&amp;</span>color);
         <span class="type">void</span> toggle();
         <span class="type">void</span> turnOn(<span class="type">bool</span> on<span class="operator">=</span><span class="keyword">true</span>);
         <span class="type">void</span> turnOff(<span class="type">bool</span> off<span class="operator">=</span><span class="keyword">true</span>);
 
     <span class="keyword">protected</span>:
-        <span class="type">void</span> paintEvent(<span class="type"><a href="http://qt.nokia.com/doc/4.8/qpaintevent.html">QPaintEvent</a></span><span class="operator">*</span>);
+        <span class="type">void</span> paintEvent(<span class="type"><a href="http://qt-project.org/doc/qt-4.8/qpaintevent.html">QPaintEvent</a></span> <span class="operator">*</span>);
         <span class="type">int</span> ledWidth() <span class="keyword">const</span>;
 
     <span class="keyword">private</span>:

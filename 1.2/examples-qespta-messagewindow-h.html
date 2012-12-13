@@ -29,50 +29,52 @@
     <span class="comment">/**
      * Message Window. Handling errors and other messages.
      */</span>
-    <span class="keyword">class</span> MessageWindow: <span class="keyword">public</span> <span class="type"><a href="http://qt.nokia.com/doc/4.8/qdockwidget.html">QDockWidget</a></span>
+    <span class="keyword">class</span> MessageWindow: <span class="keyword">public</span> <span class="type"><a href="http://qt-project.org/doc/qt-4.8/qdockwidget.html">QDockWidget</a></span>
     {
-            Q_OBJECT
+        Q_OBJECT
 
-            <span class="type"><a href="http://qt.nokia.com/doc/4.8/qtextedit.html">QTextEdit</a></span> msgTextEdit;                          <span class="comment">///&lt; Main widget.</span>
-            <span class="keyword">static</span> MessageWindow<span class="operator">*</span> MsgHandler;       <span class="comment">///&lt; Set in constructor.</span>
-            <span class="keyword">static</span> <span class="keyword">const</span> <span class="type">char</span><span class="operator">*</span> WINDOW_TITLE;        <span class="comment">///&lt; Window title.</span>
+        <span class="type"><a href="http://qt-project.org/doc/qt-4.8/qtextedit.html">QTextEdit</a></span> msgTextEdit;              <span class="comment">///&lt; Main widget.</span>
+        <span class="keyword">static</span> MessageWindow <span class="operator">*</span>MsgHandler;   <span class="comment">///&lt; Set in constructor.</span>
+        <span class="keyword">static</span> <span class="keyword">const</span> <span class="type">char</span> <span class="operator">*</span>WINDOW_TITLE;    <span class="comment">///&lt; Window title.</span>
 
-            <span class="keyword">private</span>:
-                    <span class="keyword">static</span> <span class="type"><a href="http://qt.nokia.com/doc/4.8/qstring.html">QString</a></span> <span class="type">QtMsgToQString</span>(<span class="type"><a href="http://qt.nokia.com/doc/4.8/qtglobal.html#QtMsgType-enum">QtMsgType</a></span> type<span class="operator">,</span> <span class="keyword">const</span> <span class="type">char</span> <span class="operator">*</span>msg);
+    <span class="keyword">private</span>:
+        <span class="keyword">static</span> <span class="type"><a href="http://qt-project.org/doc/qt-4.8/qstring.html">QString</a></span> <span class="type">QtMsgToQString</span>(<span class="type"><a href="http://qt-project.org/doc/qt-4.8/qtglobal.html#QtMsgType-enum">QtMsgType</a></span> type<span class="operator">,</span> <span class="keyword">const</span> <span class="type">char</span> <span class="operator">*</span>msg);
 
-            <span class="keyword">protected</span>:
-                    <span class="comment">/**
-                     * Handle custom events. MessageWindow hadles custom events listed in
-                     * EventType enum.
-                     */</span>
-                    <span class="keyword">virtual</span> <span class="type">void</span> customEvent(<span class="type"><a href="http://qt.nokia.com/doc/4.8/qevent.html">QEvent</a></span><span class="operator">*</span> event);
+    <span class="keyword">protected</span>:
+        <span class="comment">/**
+             * Handle custom events. MessageWindow hadles custom events listed in
+             * EventType enum.
+             */</span>
+        <span class="keyword">virtual</span> <span class="type">void</span> customEvent(<span class="type"><a href="http://qt-project.org/doc/qt-4.8/qevent.html">QEvent</a></span><span class="operator">*</span> event);
 
-            <span class="keyword">public</span>:
-            <span class="keyword">enum</span> EventType {MessageEventType <span class="operator">=</span> <span class="type"><a href="http://qt.nokia.com/doc/4.8/qevent.html">QEvent</a></span><span class="operator">::</span>User};       <span class="comment">///&lt; Custom event types.</span>
+    <span class="keyword">public</span>:
+        <span class="keyword">enum</span> EventType {MessageEventType <span class="operator">=</span> <span class="type"><a href="http://qt-project.org/doc/qt-4.8/qevent.html">QEvent</a></span><span class="operator">::</span>User};    <span class="comment">///&lt; Custom event types.</span>
 
-                    <span class="comment">/**
-                     * Default constructor.
-                     *      @param parent parent widget.
-                     *      @param flags widget flags.
-                     */</span>
-                    MessageWindow(<span class="type"><a href="http://qt.nokia.com/doc/4.8/qwidget.html">QWidget</a></span><span class="operator">*</span> parent <span class="operator">=</span> <span class="number">0</span><span class="operator">,</span> <span class="type"><a href="http://qt.nokia.com/doc/4.8/qt.html">Qt</a></span><span class="operator">::</span>WFlags flags <span class="operator">=</span> <span class="number">0</span>);
+        <span class="comment">/**
+             * Default constructor.
+             *     @param parent parent widget.
+             *     @param flags widget flags.
+             */</span>
+        MessageWindow(<span class="type"><a href="http://qt-project.org/doc/qt-4.8/qwidget.html">QWidget</a></span><span class="operator">*</span> parent <span class="operator">=</span> <span class="number">0</span><span class="operator">,</span> <span class="type"><a href="http://qt-project.org/doc/qt-4.8/qt.html">Qt</a></span><span class="operator">::</span>WindowFlags flags <span class="operator">=</span> <span class="number">0</span>);
 
-                    <span class="comment">/**
-                     * Append message wrapper. Since ISO forbids casting member functions
-                     * to C functions, wrapper is needed to use this class as QtMsgHandler.
-                     * This method is thread-safe but not reentrant.
-                     *      @param type message type.
-                     *      @param msg message string.
-                     */</span>
-                    <span class="keyword">static</span> <span class="type">void</span> AppendMsgWrapper(<span class="type"><a href="http://qt.nokia.com/doc/4.8/qtglobal.html#QtMsgType-enum">QtMsgType</a></span> type<span class="operator">,</span> <span class="keyword">const</span> <span class="type">char</span> <span class="operator">*</span>msg);
-
-                    <span class="comment">/**
-                     * Post message event to the main event loop. This function encapsulates
-                     * message into MessageEvent object and passes it to the main event loop.
-                     *      @param type message type.
-                     *      @param msg message string.
-                     */</span>
-                    <span class="type">void</span> postMsgEvent(<span class="type"><a href="http://qt.nokia.com/doc/4.8/qtglobal.html#QtMsgType-enum">QtMsgType</a></span> type<span class="operator">,</span> <span class="keyword">const</span> <span class="type">char</span> <span class="operator">*</span>msg);
+        <span class="comment">/**
+             * Append message wrapper. Since ISO forbids casting member functions
+             * to C functions, wrapper is needed to use this class as QtMsgHandler.
+             * This method is thread-safe but not reentrant.
+             *     @param type message type.
+             *     @param msg message string.
+             */</span>
+        <span class="keyword">static</span> <span class="type">void</span> AppendMsgWrapper(<span class="type"><a href="http://qt-project.org/doc/qt-4.8/qtglobal.html#QtMsgType-enum">QtMsgType</a></span> type<span class="operator">,</span> <span class="keyword">const</span> <span class="type">char</span> <span class="operator">*</span>msg);
+    <span class="preprocessor">#if QT_VERSION &gt;= QT_VERSION_CHECK(5,0,0)</span>
+        <span class="keyword">static</span> <span class="type">void</span> AppendMsgWrapper(<span class="type"><a href="http://qt-project.org/doc/qt-4.8/qtglobal.html#QtMsgType-enum">QtMsgType</a></span> type<span class="operator">,</span> <span class="keyword">const</span> <span class="type">QMessageLogContext</span> <span class="operator">&amp;</span>context<span class="operator">,</span> <span class="keyword">const</span> <span class="type"><a href="http://qt-project.org/doc/qt-4.8/qstring.html">QString</a></span> <span class="operator">&amp;</span>msg);
+    <span class="preprocessor">#endif</span>
+        <span class="comment">/**
+             * Post message event to the main event loop. This function encapsulates
+             * message into MessageEvent object and passes it to the main event loop.
+             *     @param type message type.
+             *     @param msg message string.
+             */</span>
+        <span class="type">void</span> postMsgEvent(<span class="type"><a href="http://qt-project.org/doc/qt-4.8/qtglobal.html#QtMsgType-enum">QtMsgType</a></span> type<span class="operator">,</span> <span class="keyword">const</span> <span class="type">char</span> <span class="operator">*</span>msg);
 
     };
 
@@ -80,16 +82,16 @@
      * Message Event. Custom event used by @ref MessageWindow to provide multi-threaded
      * access. Encapsulates message inside @a msg variable.
      */</span>
-    <span class="keyword">class</span> MessageEvent: <span class="keyword">public</span> <span class="type"><a href="http://qt.nokia.com/doc/4.8/qevent.html">QEvent</a></span>
+    <span class="keyword">class</span> MessageEvent: <span class="keyword">public</span> <span class="type"><a href="http://qt-project.org/doc/qt-4.8/qevent.html">QEvent</a></span>
     {
-        <span class="keyword">public</span>:
-            <span class="type"><a href="http://qt.nokia.com/doc/4.8/qstring.html">QString</a></span> msg;    <span class="comment">///&lt; Message string.</span>
+    <span class="keyword">public</span>:
+        <span class="type"><a href="http://qt-project.org/doc/qt-4.8/qstring.html">QString</a></span> msg;    <span class="comment">///&lt; Message string.</span>
 
-            <span class="comment">/**
+        <span class="comment">/**
              * Contructor.
-             *      @param msg message to post.
+             *     @param msg message to post.
              */</span>
-            MessageEvent(<span class="type"><a href="http://qt.nokia.com/doc/4.8/qstring.html">QString</a></span> <span class="operator">&amp;</span> msg);
+        MessageEvent(<span class="type"><a href="http://qt-project.org/doc/qt-4.8/qstring.html">QString</a></span> <span class="operator">&amp;</span>msg);
     };
 
     <span class="preprocessor">#endif /*MESSAGEWINDOW_H_*/</span></pre>

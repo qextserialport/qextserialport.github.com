@@ -28,48 +28,48 @@
     MainWindow<span class="operator">::</span>MainWindow()
     {
         <span class="comment">//central widget</span>
-            QespTest<span class="operator">*</span> qespTest <span class="operator">=</span> <span class="keyword">new</span> QespTest();
+        QespTest <span class="operator">*</span>qespTest <span class="operator">=</span> <span class="keyword">new</span> QespTest();
         setCentralWidget(qespTest);
-            <span class="comment">//bottom dock widget</span>
-            MessageWindow<span class="operator">*</span> msgWindow <span class="operator">=</span> <span class="keyword">new</span> MessageWindow();
-            addDockWidget(<span class="type"><a href="http://qt.nokia.com/doc/4.8/qt.html">Qt</a></span><span class="operator">::</span>BottomDockWidgetArea<span class="operator">,</span> msgWindow);
+        <span class="comment">//bottom dock widget</span>
+        MessageWindow <span class="operator">*</span>msgWindow <span class="operator">=</span> <span class="keyword">new</span> MessageWindow();
+        addDockWidget(<span class="type"><a href="http://qt-project.org/doc/qt-4.8/qt.html">Qt</a></span><span class="operator">::</span>BottomDockWidgetArea<span class="operator">,</span> msgWindow);
 
-            createActions();
-            createMenus();
+        createActions();
+        createMenus();
 
         setWindowTitle(tr(<span class="string">&quot;QextSerialPort Test Application&quot;</span>));
     }
 
     <span class="type">void</span> MainWindow<span class="operator">::</span>about()
     {
-        <span class="type"><a href="http://qt.nokia.com/doc/4.8/qmessagebox.html">QMessageBox</a></span><span class="operator">::</span>about(<span class="keyword">this</span><span class="operator">,</span> tr(<span class="string">&quot;About &quot;</span>)<span class="operator">,</span>
-                tr(<span class="string">&quot;&lt;B&gt;&quot;</span><span class="string">&quot;&lt;/B&gt;&lt;BR&gt;&quot;</span>
-                                    <span class="string">&quot;author: Michal Policht&lt;br&gt;&quot;</span>
-                    <span class="string">&quot;&lt;a href='mailto:xpolik@users.sourceforge.net'&gt;xpolik@users.sourceforge.net&lt;/a&gt;&quot;</span>));
+        <span class="type"><a href="http://qt-project.org/doc/qt-4.8/qmessagebox.html">QMessageBox</a></span><span class="operator">::</span>about(<span class="keyword">this</span><span class="operator">,</span> tr(<span class="string">&quot;About &quot;</span>)<span class="operator">,</span>
+                           tr(<span class="string">&quot;&lt;B&gt;&quot;</span><span class="string">&quot;&lt;/B&gt;&lt;BR&gt;&quot;</span>
+                              <span class="string">&quot;author: Michal Policht&lt;br&gt;&quot;</span>
+                              <span class="string">&quot;&lt;a href='mailto:xpolik@users.sourceforge.net'&gt;xpolik@users.sourceforge.net&lt;/a&gt;&quot;</span>));
     }
 
     <span class="type">void</span> MainWindow<span class="operator">::</span>createActions()
     {
-            <span class="comment">//File actions</span>
-            exitAct <span class="operator">=</span> <span class="keyword">new</span> <span class="type"><a href="http://qt.nokia.com/doc/4.8/qaction.html">QAction</a></span>(tr(<span class="string">&quot;E&amp;xit&quot;</span>)<span class="operator">,</span> <span class="keyword">this</span>);
-            exitAct<span class="operator">-</span><span class="operator">&gt;</span>setShortcut(tr(<span class="string">&quot;CTRL+D&quot;</span>));
-            exitAct<span class="operator">-</span><span class="operator">&gt;</span>setStatusTip(tr(<span class="string">&quot;Exit the application&quot;</span>));
-            connect(exitAct<span class="operator">,</span> SIGNAL(triggered())<span class="operator">,</span> <span class="keyword">this</span><span class="operator">,</span> SLOT(close()));
+        <span class="comment">//File actions</span>
+        exitAct <span class="operator">=</span> <span class="keyword">new</span> <span class="type"><a href="http://qt-project.org/doc/qt-4.8/qaction.html">QAction</a></span>(tr(<span class="string">&quot;E&amp;xit&quot;</span>)<span class="operator">,</span> <span class="keyword">this</span>);
+        exitAct<span class="operator">-</span><span class="operator">&gt;</span>setShortcut(tr(<span class="string">&quot;CTRL+D&quot;</span>));
+        exitAct<span class="operator">-</span><span class="operator">&gt;</span>setStatusTip(tr(<span class="string">&quot;Exit the application&quot;</span>));
+        connect(exitAct<span class="operator">,</span> SIGNAL(triggered())<span class="operator">,</span> <span class="keyword">this</span><span class="operator">,</span> SLOT(close()));
 
-            <span class="comment">//Help actions</span>
-            aboutAct <span class="operator">=</span> <span class="keyword">new</span> <span class="type"><a href="http://qt.nokia.com/doc/4.8/qaction.html">QAction</a></span>(tr(<span class="string">&quot;&amp;About&quot;</span>)<span class="operator">,</span> <span class="keyword">this</span>);
-            aboutAct<span class="operator">-</span><span class="operator">&gt;</span>setShortcut(tr(<span class="string">&quot;CTRL+A&quot;</span>));
-            aboutAct<span class="operator">-</span><span class="operator">&gt;</span>setStatusTip(tr(<span class="string">&quot;About application&quot;</span>));
-            connect(aboutAct<span class="operator">,</span> SIGNAL(triggered())<span class="operator">,</span> <span class="keyword">this</span><span class="operator">,</span> SLOT(about()));
+        <span class="comment">//Help actions</span>
+        aboutAct <span class="operator">=</span> <span class="keyword">new</span> <span class="type"><a href="http://qt-project.org/doc/qt-4.8/qaction.html">QAction</a></span>(tr(<span class="string">&quot;&amp;About&quot;</span>)<span class="operator">,</span> <span class="keyword">this</span>);
+        aboutAct<span class="operator">-</span><span class="operator">&gt;</span>setShortcut(tr(<span class="string">&quot;CTRL+A&quot;</span>));
+        aboutAct<span class="operator">-</span><span class="operator">&gt;</span>setStatusTip(tr(<span class="string">&quot;About application&quot;</span>));
+        connect(aboutAct<span class="operator">,</span> SIGNAL(triggered())<span class="operator">,</span> <span class="keyword">this</span><span class="operator">,</span> SLOT(about()));
     }
 
     <span class="type">void</span> MainWindow<span class="operator">::</span>createMenus()
     {
-            fileMenu <span class="operator">=</span> menuBar()<span class="operator">-</span><span class="operator">&gt;</span>addMenu(tr(<span class="string">&quot;&amp;File&quot;</span>));
-            fileMenu<span class="operator">-</span><span class="operator">&gt;</span>addAction(exitAct);
+        fileMenu <span class="operator">=</span> menuBar()<span class="operator">-</span><span class="operator">&gt;</span>addMenu(tr(<span class="string">&quot;&amp;File&quot;</span>));
+        fileMenu<span class="operator">-</span><span class="operator">&gt;</span>addAction(exitAct);
 
-            helpMenu <span class="operator">=</span> menuBar()<span class="operator">-</span><span class="operator">&gt;</span>addMenu(tr(<span class="string">&quot;&amp;Help&quot;</span>));
-            helpMenu<span class="operator">-</span><span class="operator">&gt;</span>addAction(aboutAct);
+        helpMenu <span class="operator">=</span> menuBar()<span class="operator">-</span><span class="operator">&gt;</span>addMenu(tr(<span class="string">&quot;&amp;Help&quot;</span>));
+        helpMenu<span class="operator">-</span><span class="operator">&gt;</span>addAction(aboutAct);
     }</pre>
 </div>
 <!-- @@@examples/qespta/MainWindow.cpp -->

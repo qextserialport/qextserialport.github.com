@@ -4,7 +4,36 @@
     <virtualFolder>qdoc</virtualFolder>
     <filterSection>
         <toc>
-            <section ref="index.html" title="QextSerialPort Reference Documentation"/>
+            <section ref="index.html" title="QextSerialPort Reference Documentation">
+                <section ref="classes.html" title=""/>
+                <section ref="examples-qespta-mainwindow-cpp.html" title="MainWindow.cpp Example File"/>
+                <section ref="examples-qespta-mainwindow-h.html" title="MainWindow.h Example File"/>
+                <section ref="examples-qespta-messagewindow-cpp.html" title="MessageWindow.cpp Example File"/>
+                <section ref="examples-qespta-messagewindow-h.html" title="MessageWindow.h Example File"/>
+                <section ref="portsettings.html" title="PortSettings Class Reference"/>
+                <section ref="examples-qespta-qesptest-cpp.html" title="QespTest.cpp Example File"/>
+                <section ref="examples-qespta-qesptest-h.html" title="QespTest.h Example File"/>
+                <section ref="qextportinfo.html" title="QextPortInfo Class Reference"/>
+                <section ref="qextserialenumerator.html" title="QextSerialEnumerator Class Reference">
+                    <section ref="qextserialenumerator-members.html" title="List of all members"/>
+                </section>
+                <section ref="qextserialport.html" title="QextSerialPort Class Reference">
+                    <section ref="qextserialport-members.html" title="List of all members"/>
+                </section>
+                <section ref="index.html" title="QextSerialPort Manual"/>
+                <section ref="examples-uartassistant.html" title="UartAssistant Demo"/>
+                <section ref="examples-uartassistant-dialog-cpp.html" title="dialog.cpp Example File"/>
+                <section ref="examples-uartassistant-dialog-h.html" title="dialog.h Example File"/>
+                <section ref="examples-uartassistant-dialog-ui.html" title="dialog.ui Example File"/>
+                <section ref="examples-enumerator.html" title="enumerator Demo"/>
+                <section ref="examples-enumerator-enumerator-pro.html" title="enumerator.pro Example File"/>
+                <section ref="examples-uartassistant-hled-cpp.html" title="hled.cpp Example File"/>
+                <section ref="examples-uartassistant-hled-h.html" title="hled.h Example File"/>
+                <section ref="examples-qespta-main-cpp.html" title="main.cpp Example File"/>
+                <section ref="examples-qespta.html" title="qespta Demo"/>
+                <section ref="examples-qespta-qespta-pro.html" title="qespta.pro Example File"/>
+                <section ref="examples-uartassistant-uartassistant-pro.html" title="uartassistant.pro Example File"/>
+            </section>
         </toc>
         <keywords>
             <keyword name="PortSettings" id="PortSettings" ref="portsettings.html"/>
@@ -70,6 +99,7 @@
         <files>
             <file>examples-uartassistant-hled-h.html</file>
             <file>examples-uartassistant-dialog-ui.html</file>
+            <file>qextserialenumerator-members.html</file>
             <file>examples-uartassistant-dialog-cpp.html</file>
             <file>examples-qespta-qesptest-cpp.html</file>
             <file>examples-uartassistant-main-cpp.html</file>
@@ -89,6 +119,7 @@
             <file>images/uartassistant.png</file>
             <file>examples-uartassistant-uartassistant-pro.html</file>
             <file>examples-qespta-mainwindow-h.html</file>
+            <file>qextserialport-members.html</file>
             <file>examples-enumerator-enumerator-pro.html</file>
             <file>examples-uartassistant.html</file>
             <file>qextportinfo.html</file>

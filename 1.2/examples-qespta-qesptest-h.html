@@ -19,32 +19,32 @@
 
     <span class="preprocessor">#include &lt;QWidget&gt;</span>
 
-    <span class="keyword">class</span> <span class="type"><a href="http://qt.nokia.com/doc/4.8/qlineedit.html">QLineEdit</a></span>;
-    <span class="keyword">class</span> <span class="type"><a href="http://qt.nokia.com/doc/4.8/qtextedit.html">QTextEdit</a></span>;
+    <span class="keyword">class</span> <span class="type"><a href="http://qt-project.org/doc/qt-4.8/qlineedit.html">QLineEdit</a></span>;
+    <span class="keyword">class</span> <span class="type"><a href="http://qt-project.org/doc/qt-4.8/qtextedit.html">QTextEdit</a></span>;
     <span class="keyword">class</span> QextSerialPort;
-    <span class="keyword">class</span> <span class="type"><a href="http://qt.nokia.com/doc/4.8/qspinbox.html">QSpinBox</a></span>;
+    <span class="keyword">class</span> <span class="type"><a href="http://qt-project.org/doc/qt-4.8/qspinbox.html">QSpinBox</a></span>;
 
-    <span class="keyword">class</span> QespTest :  <span class="keyword">public</span> <span class="type"><a href="http://qt.nokia.com/doc/4.8/qwidget.html">QWidget</a></span>
+    <span class="keyword">class</span> QespTest :  <span class="keyword">public</span> <span class="type"><a href="http://qt-project.org/doc/qt-4.8/qwidget.html">QWidget</a></span>
     {
-      Q_OBJECT
+        Q_OBJECT
     <span class="keyword">public</span>:
-      QespTest(<span class="type"><a href="http://qt.nokia.com/doc/4.8/qwidget.html">QWidget</a></span> <span class="operator">*</span>parent<span class="operator">=</span><span class="number">0</span>);
+        QespTest(<span class="type"><a href="http://qt-project.org/doc/qt-4.8/qwidget.html">QWidget</a></span> <span class="operator">*</span>parent<span class="operator">=</span><span class="number">0</span>);
 
-      <span class="keyword">virtual</span> <span class="operator">~</span>QespTest();
+        <span class="keyword">virtual</span> <span class="operator">~</span>QespTest();
 
     <span class="keyword">private</span>:
-      <span class="type"><a href="http://qt.nokia.com/doc/4.8/qlineedit.html">QLineEdit</a></span> <span class="operator">*</span>message;
-      <span class="type"><a href="http://qt.nokia.com/doc/4.8/qspinbox.html">QSpinBox</a></span><span class="operator">*</span> delaySpinBox;
-      <span class="type"><a href="http://qt.nokia.com/doc/4.8/qtextedit.html">QTextEdit</a></span> <span class="operator">*</span>received_msg;
-      QextSerialPort <span class="operator">*</span>port;
+        <span class="type"><a href="http://qt-project.org/doc/qt-4.8/qlineedit.html">QLineEdit</a></span> <span class="operator">*</span>message;
+        <span class="type"><a href="http://qt-project.org/doc/qt-4.8/qspinbox.html">QSpinBox</a></span> <span class="operator">*</span>delaySpinBox;
+        <span class="type"><a href="http://qt-project.org/doc/qt-4.8/qtextedit.html">QTextEdit</a></span> <span class="operator">*</span>received_msg;
+        QextSerialPort <span class="operator">*</span>port;
 
     <span class="keyword">private</span> <span class="keyword">slots</span>:
-      <span class="type">void</span> transmitMsg();
-      <span class="type">void</span> receiveMsg();
-      <span class="type">void</span> appendCR();
-      <span class="type">void</span> appendLF();
-      <span class="type">void</span> closePort();
-      <span class="type">void</span> openPort();
+        <span class="type">void</span> transmitMsg();
+        <span class="type">void</span> receiveMsg();
+        <span class="type">void</span> appendCR();
+        <span class="type">void</span> appendLF();
+        <span class="type">void</span> closePort();
+        <span class="type">void</span> openPort();
     };
 
     <span class="preprocessor">#endif</span></pre>
